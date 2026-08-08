@@ -62,22 +62,6 @@ Roda `test-static.js`, que usa fixtures locais (`fixtures/good-pdp.html` e
 2. o score engine reflete isso corretamente
 3. o "antes/depois" (mock baseado nos achados reais do Obramax) sobe de
    **12/100 (F)** para **100/100 (A)**
-
-## Roteiro de demo sugerido (< 5 min)
-
-1. Abra com o achado real: "Testamos isso na Obramax e achamos 22 barreiras,
-   uma delas crítica, no botão principal do menu."
-2. Rode o audit ao vivo (ou mostre o relatório pré-gerado) → mostre o score
-   baixo e o log da simulação de compra falhando num passo específico.
-3. Mostre o diff da correção sugerida para aquele passo.
-4. Rode de novo (ou mostre o relatório "depois") → score sobe, e a simulação
-   de compra completa os 4 passos.
-5. Feche com o gancho de negócio: "Isso não é só acessibilidade — é um canal
-   de vendas (agentic commerce) que a loja pode estar perdendo sem saber."
-
-## Próximos passos (se sobrar tempo)
-
-- Trocar o `heuristicReasoner` por uma chamada real a um LLM
   (`src/agentTask.js` já é pluggável via parâmetro `reasoner`) para matching
   mais robusto de intenção → elemento.
 - Gerador automático de diff de correção por tipo de violação axe-core
