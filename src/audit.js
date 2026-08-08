@@ -9,7 +9,7 @@
  * Example:
  *   node src/audit.js https://www.obramax.com.br --task-search="furadeira" --out=reports/obramax.json
  */
-const { llmReasoner } = require('./reasoners/llmReasoner');
+
 const fs = require('fs');
 const path = require('path');
 const { chromium } = require('playwright');
@@ -21,11 +21,12 @@ const { computeScore } = require('./score');
 
 function parseArgs(argv) {
   const url = argv[2];
-  const opts = { taskSearch: 'produto', out: 'reports/report.json' };
+  const opts = { taskSearch: 'produto', out: 'reports/report.json', reasoner: 'heuristic' };
   for (const arg of argv.slice(3)) {
     const [, key, value] = arg.match(/^--([^=]+)=(.*)$/) || [];
     if (key === 'task-search') opts.taskSearch = value;
     if (key === 'out') opts.out = value;
+    if (key === 'reasoner') opts.reasoner = value; // 'heuristic' (padrão) ou 'llm'
   }
   return { url, opts };
 }
@@ -107,7 +108,16 @@ async function main() {
 
   console.log('\n3/4 · Simulando agente tentando comprar...');
   const steps = buildAddToCartTask(opts.taskSearch);
-  const taskResult = await runAgentTask(page, steps, { reasoner: llmReasoner() });
+  // por padrão usa o heuristicReasoner (offline, sem custo, sem dependência
+  // externa). Só usa o llmReasoner se explicitamente pedido via --reasoner=llm
+  // — assim o arquivo fica disponível pra usar no futuro sem afetar runs normais.
+  let reasonerOpt = {};
+  if (opts.reasoner === 'llm') {
+    const { llmReasoner } = require('./reasoners/llmReasoner');
+    reasonerOpt = { reasoner: llmReasoner() };
+    console.log('   (usando llmReasoner — precisa de ANTHROPIC_API_KEY no ambiente)');
+  }
+  const taskResult = await runAgentTask(page, steps, reasonerOpt);
   taskResult.log.forEach((s) =>
     console.log(`   ${s.success ? '✅' : '❌'} ${s.step}${s.reason ? ' — ' + s.reason : ''}`)
   );
