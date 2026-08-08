@@ -1,18 +1,14 @@
 /**
  * axeCheck.js
  * -----------
- * Runs axe-core inside the real rendered page (needs a Playwright `page`).
- * Same engine BrowserStack Site Scanner uses under the hood — so results are
- * comparable to a manual BrowserStack report.
- *
- * We tag each violation with `blocksAgent: true/false`:
- *   - true  -> breaks the semantic/accessibility tree an AI agent reads
+ * Roda axe-core dentro de uma página real (precisa de Playwright `page`).
+ * Colocamos uma tag em cada violação com `blocksAgent: true/false`:
+ *   - true  -> Quebra a arvore semantica/acessibilidade que um Agent de IA lê
  *              (aria-*, button/link names, form labels, frame titles, roles)
- *   - false -> mostly a human-visual concern (color-contrast) — still WCAG,
- *              still worth fixing, but doesn't stop an agent from acting.
- *
- * This split is what let us weight the score toward "can an agent actually
- * use this page" rather than just "how many a11y issues exist".
+ *   - false -> Maioria preocupação huamana visual(color-contrast) — still WCAG,
+ *              ainda vale a pena consertar, mas não impede o Agent de seguir com o processo.
+ *Essa divisão é o que nos permitiu dar mais peso à pontuação com base em
+ "se um agente consegue realmente usar esta página", em vez de apenas "quantos problemas de acessibilidade existem".
  */
 
 const AXE_CORE_PATH = require.resolve('axe-core/axe.min.js');

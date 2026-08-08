@@ -1,12 +1,12 @@
 /**
  * staticChecks.js
  * ----------------
- * Checks that DON'T need a real browser render — just HTTP fetch + regex/DOM parsing.
- * These map to the "how legible is this site to an AI agent" signals that don't
- * depend on the accessibility tree (that part lives in axeCheck.js / agentTask.js).
+* Verificações que NÃO exigem renderização em um navegador real — apenas busca HTTP + análise via regex/DOM.
+ * Elas correspondem aos sinais de "quão legível este site é para um agente de IA" que não
+ * dependem da árvore de acessibilidade (essa parte é tratada em axeCheck.js / agentTask.js).
  *
- * Each check returns: { id, label, passed, weight, detail }
- * `weight` is how many points it's worth out of the "static" bucket (see score.js).
+ * Cada verificação retorna: { id, label, passed, weight, detail }
+ * `weight` indica quantos pontos a verificação vale dentro do grupo "estático" (veja score.js).
  */
 
 const { JSDOM } = require('jsdom');
