@@ -1,0 +1,974 @@
+{
+  "url": "https://www.obramax.com.br",
+  "timestamp": "2026-08-08T19:44:36.529Z",
+  "score": {
+    "total": 46,
+    "breakdown": {
+      "static": {
+        "earned": 15,
+        "maxPoints": 45
+      },
+      "axe": {
+        "earned": 6,
+        "maxPoints": 30
+      },
+      "agentTask": {
+        "earned": 25,
+        "maxPoints": 25
+      }
+    },
+    "grade": "D"
+  },
+  "staticResults": [
+    {
+      "id": "llms-txt",
+      "label": "llms.txt presente na raiz do site",
+      "passed": false,
+      "weight": 10,
+      "detail": "Não encontrado em https://www.obramax.com.br/llms.txt"
+    },
+    {
+      "id": "robots-agents",
+      "label": "robots.txt não bloqueia agentes de IA conhecidos",
+      "passed": true,
+      "weight": 5,
+      "detail": "robots.txt ausente = nada bloqueado por padrão"
+    },
+    {
+      "id": "semantic-landmarks",
+      "label": "Landmarks semânticos presentes (nav, main, um único h1)",
+      "passed": true,
+      "weight": 10,
+      "detail": "nav: true, main: true, h1 count: 1"
+    },
+    {
+      "id": "product-schema",
+      "label": "Página de produto tem JSON-LD schema.org/Product com preço e disponibilidade",
+      "passed": false,
+      "weight": 20,
+      "detail": "Product encontrado — preço: não, disponibilidade: não"
+    }
+  ],
+  "axeResult": {
+    "id": "axe-scan",
+    "label": "Varredura axe-core (motor usado pelo BrowserStack Site Scanner)",
+    "passed": false,
+    "weight": 30,
+    "detail": "7 violações totais | 3 bloqueiam agentes | 5 critical/serious",
+    "violations": [
+      {
+        "id": "aria-hidden-focus",
+        "impact": "serious",
+        "description": "Ensure aria-hidden elements are not focusable nor contain focusable elements",
+        "help": "ARIA hidden element must not be focusable or contain focusable elements",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-hidden-focus?application=axeAPI",
+        "blocksAgent": true,
+        "nodes": [
+          {
+            "target": [
+              ".lojaobramax-minicart-0-x-openIconContainer"
+            ],
+            "html": "<div role=\"presentation\" aria-hidden=\"true\" class=\"pa4 pointer lojaobramax-minicart-0-x-openIconContainer\">",
+            "failureSummary": "Fix all of the following:\n  Focusable content should be disabled or be removed from the DOM"
+          },
+          {
+            "target": [
+              "div[aria-label=\"Slide atual é 1 de 10\"]"
+            ],
+            "html": "<div aria-hidden=\"true\" role=\"group\" aria-roledescription=\"slide\" aria-label=\"Slide atual é 1 de 1...\" class=\"vtex-slider-layout-0...\" data-index=\"1\" style=\"width: 8.33333%;\">",
+            "failureSummary": "Fix all of the following:\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+          },
+          {
+            "target": [
+              ".lojaobramax-minicart-0-x-drawer"
+            ],
+            "html": "<div aria-hidden=\"true\" class=\"lojaobramax-minicart-0-x-drawer lojaobramax-minicart-0-x-closed  right-0 fixed top-0 bottom-0 bg-base z-999 flex flex-column\" style=\"width: 85%; max-width: 319px; min-width: 280px; pointer-events: none; z-index: 999; transform: translate3d(100%, 0px, 0px);\">",
+            "failureSummary": "Fix all of the following:\n  Focusable content should be disabled or be removed from the DOM"
+          }
+        ]
+      },
+      {
+        "id": "button-name",
+        "impact": "critical",
+        "description": "Ensure buttons have discernible text",
+        "help": "Buttons must have discernible text",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/button-name?application=axeAPI",
+        "blocksAgent": true,
+        "nodes": [
+          {
+            "target": [
+              ".vtex-flex-layout-0-x-stretchChildrenWidth.pr0.items-stretch > .vtex-flex-layout-0-x-flexCol.ml0.mr0 > .vtex-flex-layout-0-x-flexColChild.pb0 > .vtex-mega-menu-2-x-triggerContainer[data-id=\"mega-menu-trigger-button\"]"
+            ],
+            "html": "<button data-id=\"mega-menu-trigger-button\" class=\"vtex-mega-menu-2-x-triggerContainer pointer\">",
+            "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+          },
+          {
+            "target": [
+              ".vtex-slider-layout-0-x-slide--new--visible.vtex-slider-layout-0-x-slide--shelves-default--visible.vtex-slider-layout-0-x-slide--new--lastVisible:nth-child(4) > .vtex-slider-layout-0-x-slideChildrenContainer--new.vtex-slider-layout-0-x-slideChildrenContainer--shelves-default.vtex-slider-layout-0-x-slideChildrenContainer > .vtex-product-summary-2-x-container.vtex-product-summary-2-x-container--product-summary-card.vtex-product-summary-2-x-containerNormal > .vtex-product-summary-2-x-clearLink.vtex-product-summary-2-x-clearLink--product-summary-card.flex-column > .vtex-product-summary-2-x-element.vtex-product-summary-2-x-element--product-summary-card.pt3 > .vtex-flex-layout-0-x-flexRow--highlights-wishlist-container.vtex-flex-layout-0-x-flexRow--new-highlights-wishlist-container.vtex-flex-layout-0-x-flexRow > .vtex-flex-layout-0-x-flexRowContent--highlights-wishlist-container.vtex-flex-layout-0-x-flexRowContent--new-highlights-wishlist-container.justify-between > .vtex-flex-layout-0-x-stretchChildrenWidth.pr0.items-stretch:nth-child(2) > .vtex-wish-list-1-x-wishlistIconContainer > .lh-solid.min-h-regular.b--transparent"
+            ],
+            "html": "<button tabindex=\"0\" class=\"vtex-button bw1 ba fw5 v-mid relative pa0 lh-solid br2 min-h-regular t-action bg-transparent b--transparent c-action-primary hover-b--transparent hover-bg-action-secondary hover-b--action-secondary pointer \" type=\"button\">",
+            "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+          },
+          {
+            "target": [
+              ".vtex-slider-layout-0-x-slide--new--visible[aria-label=\"Slide atual é 1 de 20\"][data-index=\"1\"] > .vtex-slider-layout-0-x-slideChildrenContainer--new.vtex-slider-layout-0-x-slideChildrenContainer--shelves-default.vtex-slider-layout-0-x-slideChildrenContainer > .vtex-product-summary-2-x-container.vtex-product-summary-2-x-container--product-summary-card.vtex-product-summary-2-x-containerNormal > .vtex-product-summary-2-x-clearLink.vtex-product-summary-2-x-clearLink--product-summary-card.flex-column > .vtex-product-summary-2-x-element.vtex-product-summary-2-x-element--product-summary-card.pt3 > .vtex-flex-layout-0-x-flexRow--highlights-wishlist-container.vtex-flex-layout-0-x-flexRow--new-highlights-wishlist-container.vtex-flex-layout-0-x-flexRow > .vtex-flex-layout-0-x-flexRowContent--highlights-wishlist-container.vtex-flex-layout-0-x-flexRowContent--new-highlights-wishlist-container.justify-between > .vtex-flex-layout-0-x-stretchChildrenWidth.pr0.items-stretch:nth-child(2) > .vtex-wish-list-1-x-wishlistIconContainer > .lh-solid.min-h-regular.b--transparent"
+            ],
+            "html": "<button tabindex=\"0\" class=\"vtex-button bw1 ba fw5 v-mid relative pa0 lh-solid br2 min-h-regular t-action bg-transparent b--transparent c-action-primary hover-b--transparent hover-bg-action-secondary hover-b--action-secondary pointer \" type=\"button\">",
+            "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+          },
+          {
+            "target": [
+              ".vtex-slider-layout-0-x-slide--new--visible[aria-label=\"Slide atual é 2 de 20\"][data-index=\"2\"] > .vtex-slider-layout-0-x-slideChildrenContainer--new.vtex-slider-layout-0-x-slideChildrenContainer--shelves-default.vtex-slider-layout-0-x-slideChildrenContainer > .vtex-product-summary-2-x-container.vtex-product-summary-2-x-container--product-summary-card.vtex-product-summary-2-x-containerNormal > .vtex-product-summary-2-x-clearLink.vtex-product-summary-2-x-clearLink--product-summary-card.flex-column > .vtex-product-summary-2-x-element.vtex-product-summary-2-x-element--product-summary-card.pt3 > .vtex-flex-layout-0-x-flexRow--highlights-wishlist-container.vtex-flex-layout-0-x-flexRow--new-highlights-wishlist-container.vtex-flex-layout-0-x-flexRow > .vtex-flex-layout-0-x-flexRowContent--highlights-wishlist-container.vtex-flex-layout-0-x-flexRowContent--new-highlights-wishlist-container.justify-between > .vtex-flex-layout-0-x-stretchChildrenWidth.pr0.items-stretch:nth-child(2) > .vtex-wish-list-1-x-wishlistIconContainer > .lh-solid.min-h-regular.b--transparent"
+            ],
+            "html": "<button tabindex=\"0\" class=\"vtex-button bw1 ba fw5 v-mid relative pa0 lh-solid br2 min-h-regular t-action bg-transparent b--transparent c-action-primary hover-b--transparent hover-bg-action-secondary hover-b--action-secondary pointer \" type=\"button\">",
+            "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+          },
+          {
+            "target": [
+              ".vtex-slider-layout-0-x-slide--new--visible[aria-label=\"Slide atual é 3 de 20\"][data-index=\"3\"] > .vtex-slider-layout-0-x-slideChildrenContainer--new.vtex-slider-layout-0-x-slideChildrenContainer--shelves-default.vtex-slider-layout-0-x-slideChildrenContainer > .vtex-product-summary-2-x-container.vtex-product-summary-2-x-container--product-summary-card.vtex-product-summary-2-x-containerNormal > .vtex-product-summary-2-x-clearLink.vtex-product-summary-2-x-clearLink--product-summary-card.flex-column > .vtex-product-summary-2-x-element.vtex-product-summary-2-x-element--product-summary-card.pt3 > .vtex-flex-layout-0-x-flexRow--highlights-wishlist-container.vtex-flex-layout-0-x-flexRow--new-highlights-wishlist-container.vtex-flex-layout-0-x-flexRow > .vtex-flex-layout-0-x-flexRowContent--highlights-wishlist-container.vtex-flex-layout-0-x-flexRowContent--new-highlights-wishlist-container.justify-between > .vtex-flex-layout-0-x-stretchChildrenWidth.pr0.items-stretch:nth-child(2) > .vtex-wish-list-1-x-wishlistIconContainer > .lh-solid.min-h-regular.b--transparent"
+            ],
+            "html": "<button tabindex=\"0\" class=\"vtex-button bw1 ba fw5 v-mid relative pa0 lh-solid br2 min-h-regular t-action bg-transparent b--transparent c-action-primary hover-b--transparent hover-bg-action-secondary hover-b--action-secondary pointer \" type=\"button\">",
+            "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+          },
+          {
+            "target": [
+              ".vtex-slider-layout-0-x-slide--new--visible[aria-label=\"Slide atual é 4 de 20\"][data-index=\"4\"] > .vtex-slider-layout-0-x-slideChildrenContainer--new.vtex-slider-layout-0-x-slideChildrenContainer--shelves-default.vtex-slider-layout-0-x-slideChildrenContainer > .vtex-product-summary-2-x-container.vtex-product-summary-2-x-container--product-summary-card.vtex-product-summary-2-x-containerNormal > .vtex-product-summary-2-x-clearLink.vtex-product-summary-2-x-clearLink--product-summary-card.flex-column > .vtex-product-summary-2-x-element.vtex-product-summary-2-x-element--product-summary-card.pt3 > .vtex-flex-layout-0-x-flexRow--highlights-wishlist-container.vtex-flex-layout-0-x-flexRow--new-highlights-wishlist-container.vtex-flex-layout-0-x-flexRow > .vtex-flex-layout-0-x-flexRowContent--highlights-wishlist-container.vtex-flex-layout-0-x-flexRowContent--new-highlights-wishlist-container.justify-between > .vtex-flex-layout-0-x-stretchChildrenWidth.pr0.items-stretch:nth-child(2) > .vtex-wish-list-1-x-wishlistIconContainer > .lh-solid.min-h-regular.b--transparent"
+            ],
+            "html": "<button tabindex=\"0\" class=\"vtex-button bw1 ba fw5 v-mid relative pa0 lh-solid br2 min-h-regular t-action bg-transparent b--transparent c-action-primary hover-b--transparent hover-bg-action-secondary hover-b--action-secondary pointer \" type=\"button\">",
+            "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+          },
+          {
+            "target": [
+              ".vtex-slider-layout-0-x-slide--new--visible[aria-label=\"Slide atual é 5 de 20\"][data-index=\"5\"] > .vtex-slider-layout-0-x-slideChildrenContainer--new.vtex-slider-layout-0-x-slideChildrenContainer--shelves-default.vtex-slider-layout-0-x-slideChildrenContainer > .vtex-product-summary-2-x-container.vtex-product-summary-2-x-container--product-summary-card.vtex-product-summary-2-x-containerNormal > .vtex-product-summary-2-x-clearLink.vtex-product-summary-2-x-clearLink--product-summary-card.flex-column > .vtex-product-summary-2-x-element.vtex-product-summary-2-x-element--product-summary-card.pt3 > .vtex-flex-layout-0-x-flexRow--highlights-wishlist-container.vtex-flex-layout-0-x-flexRow--new-highlights-wishlist-container.vtex-flex-layout-0-x-flexRow > .vtex-flex-layout-0-x-flexRowContent--highlights-wishlist-container.vtex-flex-layout-0-x-flexRowContent--new-highlights-wishlist-container.justify-between > .vtex-flex-layout-0-x-stretchChildrenWidth.pr0.items-stretch:nth-child(2) > .vtex-wish-list-1-x-wishlistIconContainer > .lh-solid.min-h-regular.b--transparent"
+            ],
+            "html": "<button tabindex=\"0\" class=\"vtex-button bw1 ba fw5 v-mid relative pa0 lh-solid br2 min-h-regular t-action bg-transparent b--transparent c-action-primary hover-b--transparent hover-bg-action-secondary hover-b--action-secondary pointer \" type=\"button\">",
+            "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+          },
+          {
+            "target": [
+              ".push-launcher"
+            ],
+            "html": "<button type=\"button\" class=\"push-launcher\"><div class=\"push-open-launcher__container\"><img src=\"https://push-ilha-sp-push-media-prod.s3.sa-east-1.amazonaws.com/media/22857/e571/097a/e571097a-db34-48c4-9b07-db3f41e897b9.png\" class=\"push-open-launcher\" alt=\"\"></div></button>",
+            "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+          },
+          {
+            "target": [
+              ".lojaobramax-region-0-x-toast__dismiss"
+            ],
+            "html": "<button class=\"lojaobramax-region-0-x-toast__dismiss lojaobramax-region-0-x-toast__button\">",
+            "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+          }
+        ]
+      },
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+        "blocksAgent": false,
+        "nodes": [
+          {
+            "target": [
+              "li[data-group-code=\"6119\"] > div[data-platform=\"web\"] > .ins-element-text.ins-selectable-element[data-no-menu-bar=\"true\"] > .ins-product-content[data-disable-settings=\"height\"][data-selected-layout=\"layout-3-1\"] > .ins-product-element > .ins-erase-container[data-selected-layout=\"layout-3-5\"] > .ins-wrap-layout-triple[data-element-name=\"Layout\"][data-selected-layout=\"layout-3-5\"] > .ins-layout-block-wrapper.ins-element-select-menu[data-min-width=\"5\"]:nth-child(2) > .ins-whole-price-container[data-min-height=\"40\"][data-unique-index=\"2\"] > .ins-dynamic-text-wrapper.ins-element-dynamic-text[data-min-width=\"10\"] > div[data-dynamic-text-value=\"<p><br></p>\"][data-lines=\"3\"][aria-label=\"\"] > .ins-product-link.ins-dynamic-text-product-link[title=\"<p><br></p>\"] > .ins-whole-price-header"
+            ],
+            "html": "<div class=\"ins-whole-price-header\">Preço Atacado</div>",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.72 (foreground color: #ef7f00, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "div[ins-product-id=\"6068\"] > .ins-background-image-area.ins-adaptive-button-container.ins-add-to-cart-button > .ins-element-link[href=\"javascript:void(0)\"][event-collection=\"true\"] > .ins-adaptive-button.ins-own-link-available.add-to-cart-text"
+            ],
+            "html": "<div class=\"ins-adaptive-button ins-own-link-available add-to-cart-text ins-editable-after-click-text\">Adicionar ao carrinho</div>",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.72 (foreground color: #ffffff, background color: #ef7f00, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "li[data-group-code=\"68267\"] > div[data-platform=\"web\"] > .ins-element-text.ins-selectable-element[data-no-menu-bar=\"true\"] > .ins-product-content[data-disable-settings=\"height\"][data-selected-layout=\"layout-3-1\"] > .ins-product-element > .ins-erase-container[data-selected-layout=\"layout-3-5\"] > .ins-wrap-layout-triple[data-element-name=\"Layout\"][data-selected-layout=\"layout-3-5\"] > .ins-layout-block-wrapper.ins-element-select-menu[data-min-width=\"5\"]:nth-child(2) > .ins-whole-price-container[data-min-height=\"40\"][data-unique-index=\"2\"] > .ins-dynamic-text-wrapper.ins-element-dynamic-text[data-min-width=\"10\"] > div[data-dynamic-text-value=\"<p><br></p>\"][data-lines=\"3\"][aria-label=\"\"] > .ins-product-link.ins-dynamic-text-product-link[title=\"<p><br></p>\"] > .ins-whole-price-header"
+            ],
+            "html": "<div class=\"ins-whole-price-header\">Preço Atacado</div>",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.72 (foreground color: #ef7f00, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "div[ins-product-id=\"83288\"] > .ins-background-image-area.ins-adaptive-button-container.ins-add-to-cart-button > .ins-element-link[href=\"javascript:void(0)\"][event-collection=\"true\"] > .ins-adaptive-button.ins-own-link-available.add-to-cart-text"
+            ],
+            "html": "<div class=\"ins-adaptive-button ins-own-link-available add-to-cart-text ins-editable-after-click-text\">Adicionar ao carrinho</div>",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.72 (foreground color: #ffffff, background color: #ef7f00, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "li[data-group-code=\"70867\"] > div[data-platform=\"web\"] > .ins-element-text.ins-selectable-element[data-no-menu-bar=\"true\"] > .ins-product-content[data-disable-settings=\"height\"][data-selected-layout=\"layout-3-1\"] > .ins-product-element > .ins-erase-container[data-selected-layout=\"layout-3-5\"] > .ins-wrap-layout-triple[data-element-name=\"Layout\"][data-selected-layout=\"layout-3-5\"] > .ins-layout-block-wrapper.ins-element-select-menu[data-min-width=\"5\"]:nth-child(2) > .ins-whole-price-container[data-min-height=\"40\"][data-unique-index=\"2\"] > .ins-dynamic-text-wrapper.ins-element-dynamic-text[data-min-width=\"10\"] > div[data-dynamic-text-value=\"<p><br></p>\"][data-lines=\"3\"][aria-label=\"\"] > .ins-product-link.ins-dynamic-text-product-link[title=\"<p><br></p>\"] > .ins-whole-price-header"
+            ],
+            "html": "<div class=\"ins-whole-price-header\">Preço Atacado</div>",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.72 (foreground color: #ef7f00, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "div[ins-product-id=\"9472\"] > .ins-background-image-area.ins-adaptive-button-container.ins-add-to-cart-button > .ins-element-link[href=\"javascript:void(0)\"][event-collection=\"true\"] > .ins-adaptive-button.ins-own-link-available.add-to-cart-text"
+            ],
+            "html": "<div class=\"ins-adaptive-button ins-own-link-available add-to-cart-text ins-editable-after-click-text\">Adicionar ao carrinho</div>",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.72 (foreground color: #ffffff, background color: #ef7f00, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "div[ins-product-id=\"78849\"] > .ins-background-image-area.ins-adaptive-button-container.ins-add-to-cart-button > .ins-element-link[href=\"javascript:void(0)\"][event-collection=\"true\"] > .ins-adaptive-button.ins-own-link-available.add-to-cart-text"
+            ],
+            "html": "<div class=\"ins-adaptive-button ins-own-link-available add-to-cart-text ins-editable-after-click-text\">Adicionar ao carrinho</div>",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.72 (foreground color: #ffffff, background color: #ef7f00, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "div[ins-product-id=\"84445\"] > .ins-background-image-area.ins-adaptive-button-container.ins-add-to-cart-button > .ins-element-link[href=\"javascript:void(0)\"][event-collection=\"true\"] > .ins-adaptive-button.ins-own-link-available.add-to-cart-text"
+            ],
+            "html": "<div class=\"ins-adaptive-button ins-own-link-available add-to-cart-text ins-editable-after-click-text\">Adicionar ao carrinho</div>",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.72 (foreground color: #ffffff, background color: #ef7f00, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".lojaobramax-region-0-x-toast__callToAction"
+            ],
+            "html": "<button class=\"lojaobramax-region-0-x-toast__callToAction lojaobramax-region-0-x-toast__button\">Selecionar sua região</button>",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.72 (foreground color: #ffffff, background color: #ef7f00, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      },
+      {
+        "id": "landmark-unique",
+        "impact": "moderate",
+        "description": "Ensure landmarks are unique",
+        "help": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/landmark-unique?application=axeAPI",
+        "blocksAgent": false,
+        "nodes": [
+          {
+            "target": [
+              "#slider-items-tdjy58n"
+            ],
+            "html": "<section aria-label=\"slider\" id=\"slider-items-tdjy58n\" class=\"w-100 flex items-center relative vtex-slider-layout-0-x-sliderLayoutContainer vtex-slider-layout-0-x-sliderLayoutContainer--full-banner\" style=\"touch-action: pan-y;\">",
+            "failureSummary": "Fix any of the following:\n  The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable"
+          },
+          {
+            "target": [
+              ".vtex-slider-layout-0-x-slide--new--visible.vtex-slider-layout-0-x-slide--shelves-default--visible.vtex-slider-layout-0-x-slide--new--lastVisible:nth-child(4) > .vtex-slider-layout-0-x-slideChildrenContainer--new.vtex-slider-layout-0-x-slideChildrenContainer--shelves-default.vtex-slider-layout-0-x-slideChildrenContainer > .vtex-product-summary-2-x-container.vtex-product-summary-2-x-container--product-summary-card.vtex-product-summary-2-x-containerNormal"
+            ],
+            "html": "<section aria-label=\"store/product-summar...\" class=\"vtex-product-summary...\" style=\"max-width: 300px;\">",
+            "failureSummary": "Fix any of the following:\n  The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable"
+          }
+        ]
+      },
+      {
+        "id": "nested-interactive",
+        "impact": "serious",
+        "description": "Ensure interactive controls are not nested as they are not always announced by screen readers or can cause focus problems for assistive technologies",
+        "help": "Interactive controls must not be nested",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/nested-interactive?application=axeAPI",
+        "blocksAgent": false,
+        "nodes": [
+          {
+            "target": [
+              "li[data-group-code=\"6119\"] > div[data-platform=\"web\"] > .ins-element-text.ins-selectable-element[data-no-menu-bar=\"true\"] > .ins-product-content[data-disable-settings=\"height\"][data-selected-layout=\"layout-3-1\"] > .ins-product-element > .ins-wrap-layout-double.ins-erase-container[data-selected-layout=\"layout-2-1\"] > .ins-layout-wrapper[data-element-name=\"Layout\"][data-erase=\"true\"] > .ins-layout-block-wrapper.ins-element-select-menu[data-min-width=\"5\"]:nth-child(1) > div[data-min-height=\"281\"][data-unique-index=\"1\"][data-block-config=\"1.1\"] > .ins-element-image.ins-element-product-image.ins-template-image > .ins-responsive-banner-image[data-element-name=\"Product Image\"][data-variable-name=\"Image\"]"
+            ],
+            "html": "<div id=\"image-1647932527287\" class=\"ins-widget-element i...\" data-override-name=\"true\" data-element-name=\"Product Image\" data-variable-name=\"Image\" data-disable-setting...=\"width\" ondrop=\"return false;\" ondragstart=\"return false;\" data-erase=\"false\" data-removable=\"true\" role=\"img\" ...>",
+            "failureSummary": "Fix any of the following:\n  Element has focusable descendants"
+          },
+          {
+            "target": [
+              "div[ins-product-id=\"6068\"] > .ins-background-image-area.ins-adaptive-button-container.ins-add-to-cart-button"
+            ],
+            "html": "<div id=\"add-to-cart-17219913...\" class=\"ins-widget-element i...\" data-apply-to-all=\"button\" data-erase=\"false\" data-removable=\"true\" data-disable-setting...=\"width\" data-add-to-cart-tex...=\"Adicionar ao carrinh...\" data-after-click-tex...=\"Adicionar ao carrinh...\" display=\"always\" tabindex=\"0\" ...>",
+            "failureSummary": "Fix any of the following:\n  Using a negative tabindex on an element inside an interactive control does not prevent assistive technologies from focusing the element (even with aria-hidden=\"true\")"
+          },
+          {
+            "target": [
+              "li[data-group-code=\"68267\"] > div[data-platform=\"web\"] > .ins-element-text.ins-selectable-element[data-no-menu-bar=\"true\"] > .ins-product-content[data-disable-settings=\"height\"][data-selected-layout=\"layout-3-1\"] > .ins-product-element > .ins-wrap-layout-double.ins-erase-container[data-selected-layout=\"layout-2-1\"] > .ins-layout-wrapper[data-element-name=\"Layout\"][data-erase=\"true\"] > .ins-layout-block-wrapper.ins-element-select-menu[data-min-width=\"5\"]:nth-child(1) > div[data-min-height=\"281\"][data-unique-index=\"1\"][data-block-config=\"1.1\"] > .ins-element-image.ins-element-product-image.ins-template-image > .ins-responsive-banner-image[data-element-name=\"Product Image\"][data-variable-name=\"Image\"]"
+            ],
+            "html": "<div id=\"image-1647932527287\" class=\"ins-widget-element i...\" data-override-name=\"true\" data-element-name=\"Product Image\" data-variable-name=\"Image\" data-disable-setting...=\"width\" ondrop=\"return false;\" ondragstart=\"return false;\" data-erase=\"false\" data-removable=\"true\" role=\"img\" ...>",
+            "failureSummary": "Fix any of the following:\n  Element has focusable descendants"
+          },
+          {
+            "target": [
+              "div[ins-product-id=\"83288\"] > .ins-background-image-area.ins-adaptive-button-container.ins-add-to-cart-button"
+            ],
+            "html": "<div id=\"add-to-cart-17219913...\" class=\"ins-widget-element i...\" data-apply-to-all=\"button\" data-erase=\"false\" data-removable=\"true\" data-disable-setting...=\"width\" data-add-to-cart-tex...=\"Adicionar ao carrinh...\" data-after-click-tex...=\"Adicionar ao carrinh...\" display=\"always\" tabindex=\"0\" ...>",
+            "failureSummary": "Fix any of the following:\n  Using a negative tabindex on an element inside an interactive control does not prevent assistive technologies from focusing the element (even with aria-hidden=\"true\")"
+          },
+          {
+            "target": [
+              "li[data-group-code=\"70867\"] > div[data-platform=\"web\"] > .ins-element-text.ins-selectable-element[data-no-menu-bar=\"true\"] > .ins-product-content[data-disable-settings=\"height\"][data-selected-layout=\"layout-3-1\"] > .ins-product-element > .ins-wrap-layout-double.ins-erase-container[data-selected-layout=\"layout-2-1\"] > .ins-layout-wrapper[data-element-name=\"Layout\"][data-erase=\"true\"] > .ins-layout-block-wrapper.ins-element-select-menu[data-min-width=\"5\"]:nth-child(1) > div[data-min-height=\"281\"][data-unique-index=\"1\"][data-block-config=\"1.1\"] > .ins-element-image.ins-element-product-image.ins-template-image > .ins-responsive-banner-image[data-element-name=\"Product Image\"][data-variable-name=\"Image\"]"
+            ],
+            "html": "<div id=\"image-1647932527287\" class=\"ins-widget-element i...\" data-override-name=\"true\" data-element-name=\"Product Image\" data-variable-name=\"Image\" data-disable-setting...=\"width\" ondrop=\"return false;\" ondragstart=\"return false;\" data-erase=\"false\" data-removable=\"true\" role=\"img\" ...>",
+            "failureSummary": "Fix any of the following:\n  Element has focusable descendants"
+          },
+          {
+            "target": [
+              "div[ins-product-id=\"9472\"] > .ins-background-image-area.ins-adaptive-button-container.ins-add-to-cart-button"
+            ],
+            "html": "<div id=\"add-to-cart-17219913...\" class=\"ins-widget-element i...\" data-apply-to-all=\"button\" data-erase=\"false\" data-removable=\"true\" data-disable-setting...=\"width\" data-add-to-cart-tex...=\"Adicionar ao carrinh...\" data-after-click-tex...=\"Adicionar ao carrinh...\" display=\"always\" tabindex=\"0\" ...>",
+            "failureSummary": "Fix any of the following:\n  Using a negative tabindex on an element inside an interactive control does not prevent assistive technologies from focusing the element (even with aria-hidden=\"true\")"
+          },
+          {
+            "target": [
+              "li[data-group-code=\"56430\"] > div[data-platform=\"web\"] > .ins-element-text.ins-selectable-element[data-no-menu-bar=\"true\"] > .ins-product-content[data-disable-settings=\"height\"][data-selected-layout=\"layout-3-1\"] > .ins-product-element > .ins-wrap-layout-double.ins-erase-container[data-selected-layout=\"layout-2-1\"] > .ins-layout-wrapper[data-element-name=\"Layout\"][data-erase=\"true\"] > .ins-layout-block-wrapper.ins-element-select-menu[data-min-width=\"5\"]:nth-child(1) > div[data-min-height=\"281\"][data-unique-index=\"1\"][data-block-config=\"1.1\"] > .ins-element-image.ins-element-product-image.ins-template-image > .ins-responsive-banner-image[data-element-name=\"Product Image\"][data-variable-name=\"Image\"]"
+            ],
+            "html": "<div id=\"image-1647932527287\" class=\"ins-widget-element i...\" data-override-name=\"true\" data-element-name=\"Product Image\" data-variable-name=\"Image\" data-disable-setting...=\"width\" ondrop=\"return false;\" ondragstart=\"return false;\" data-erase=\"false\" data-removable=\"true\" role=\"img\" ...>",
+            "failureSummary": "Fix any of the following:\n  Element has focusable descendants"
+          },
+          {
+            "target": [
+              "div[ins-product-id=\"78849\"] > .ins-background-image-area.ins-adaptive-button-container.ins-add-to-cart-button"
+            ],
+            "html": "<div id=\"add-to-cart-17219913...\" class=\"ins-widget-element i...\" data-apply-to-all=\"button\" data-erase=\"false\" data-removable=\"true\" data-disable-setting...=\"width\" data-add-to-cart-tex...=\"Adicionar ao carrinh...\" data-after-click-tex...=\"Adicionar ao carrinh...\" display=\"always\" tabindex=\"0\" ...>",
+            "failureSummary": "Fix any of the following:\n  Using a negative tabindex on an element inside an interactive control does not prevent assistive technologies from focusing the element (even with aria-hidden=\"true\")"
+          },
+          {
+            "target": [
+              "li[data-group-code=\"64860\"] > div[data-platform=\"web\"] > .ins-element-text.ins-selectable-element[data-no-menu-bar=\"true\"] > .ins-product-content[data-disable-settings=\"height\"][data-selected-layout=\"layout-3-1\"] > .ins-product-element > .ins-wrap-layout-double.ins-erase-container[data-selected-layout=\"layout-2-1\"] > .ins-layout-wrapper[data-element-name=\"Layout\"][data-erase=\"true\"] > .ins-layout-block-wrapper.ins-element-select-menu[data-min-width=\"5\"]:nth-child(1) > div[data-min-height=\"281\"][data-unique-index=\"1\"][data-block-config=\"1.1\"] > .ins-element-image.ins-element-product-image.ins-template-image > .ins-responsive-banner-image[data-element-name=\"Product Image\"][data-variable-name=\"Image\"]"
+            ],
+            "html": "<div id=\"image-1647932527287\" class=\"ins-widget-element i...\" data-override-name=\"true\" data-element-name=\"Product Image\" data-variable-name=\"Image\" data-disable-setting...=\"width\" ondrop=\"return false;\" ondragstart=\"return false;\" data-erase=\"false\" data-removable=\"true\" role=\"img\" ...>",
+            "failureSummary": "Fix any of the following:\n  Element has focusable descendants"
+          },
+          {
+            "target": [
+              "div[ins-product-id=\"84445\"] > .ins-background-image-area.ins-adaptive-button-container.ins-add-to-cart-button"
+            ],
+            "html": "<div id=\"add-to-cart-17219913...\" class=\"ins-widget-element i...\" data-apply-to-all=\"button\" data-erase=\"false\" data-removable=\"true\" data-disable-setting...=\"width\" data-add-to-cart-tex...=\"Adicionar ao carrinh...\" data-after-click-tex...=\"Adicionar ao carrinh...\" display=\"always\" tabindex=\"0\" ...>",
+            "failureSummary": "Fix any of the following:\n  Using a negative tabindex on an element inside an interactive control does not prevent assistive technologies from focusing the element (even with aria-hidden=\"true\")"
+          },
+          {
+            "target": [
+              "li[data-group-code=\"70362\"] > div[data-platform=\"web\"] > .ins-element-text.ins-selectable-element[data-no-menu-bar=\"true\"] > .ins-product-content[data-disable-settings=\"height\"][data-selected-layout=\"layout-3-1\"] > .ins-product-element > .ins-wrap-layout-double.ins-erase-container[data-selected-layout=\"layout-2-1\"] > .ins-layout-wrapper[data-element-name=\"Layout\"][data-erase=\"true\"] > .ins-layout-block-wrapper.ins-element-select-menu[data-min-width=\"5\"]:nth-child(1) > div[data-min-height=\"281\"][data-unique-index=\"1\"][data-block-config=\"1.1\"] > .ins-element-image.ins-element-product-image.ins-template-image > .ins-responsive-banner-image[data-element-name=\"Product Image\"][data-variable-name=\"Image\"]"
+            ],
+            "html": "<div id=\"image-1647932527287\" class=\"ins-widget-element i...\" data-override-name=\"true\" data-element-name=\"Product Image\" data-variable-name=\"Image\" data-disable-setting...=\"width\" ondrop=\"return false;\" ondragstart=\"return false;\" data-erase=\"false\" data-removable=\"true\" role=\"img\" ...>",
+            "failureSummary": "Fix any of the following:\n  Element has focusable descendants"
+          },
+          {
+            "target": [
+              "div[ins-product-id=\"19634\"] > .ins-background-image-area.ins-adaptive-button-container.ins-add-to-cart-button"
+            ],
+            "html": "<div id=\"add-to-cart-17219913...\" class=\"ins-widget-element i...\" data-apply-to-all=\"button\" data-erase=\"false\" data-removable=\"true\" data-disable-setting...=\"width\" data-add-to-cart-tex...=\"Adicionar ao carrinh...\" data-after-click-tex...=\"Adicionar ao carrinh...\" display=\"always\" tabindex=\"0\" ...>",
+            "failureSummary": "Fix any of the following:\n  Using a negative tabindex on an element inside an interactive control does not prevent assistive technologies from focusing the element (even with aria-hidden=\"true\")"
+          },
+          {
+            "target": [
+              "li[data-group-code=\"4149\"] > div[data-platform=\"web\"] > .ins-element-text.ins-selectable-element[data-no-menu-bar=\"true\"] > .ins-product-content[data-disable-settings=\"height\"][data-selected-layout=\"layout-3-1\"] > .ins-product-element > .ins-wrap-layout-double.ins-erase-container[data-selected-layout=\"layout-2-1\"] > .ins-layout-wrapper[data-element-name=\"Layout\"][data-erase=\"true\"] > .ins-layout-block-wrapper.ins-element-select-menu[data-min-width=\"5\"]:nth-child(1) > div[data-min-height=\"281\"][data-unique-index=\"1\"][data-block-config=\"1.1\"] > .ins-element-image.ins-element-product-image.ins-template-image > .ins-responsive-banner-image[data-element-name=\"Product Image\"][data-variable-name=\"Image\"]"
+            ],
+            "html": "<div id=\"image-1647932527287\" class=\"ins-widget-element i...\" data-override-name=\"true\" data-element-name=\"Product Image\" data-variable-name=\"Image\" data-disable-setting...=\"width\" ondrop=\"return false;\" ondragstart=\"return false;\" data-erase=\"false\" data-removable=\"true\" role=\"img\" ...>",
+            "failureSummary": "Fix any of the following:\n  Element has focusable descendants"
+          },
+          {
+            "target": [
+              "div[ins-product-id=\"94897\"] > .ins-background-image-area.ins-adaptive-button-container.ins-add-to-cart-button"
+            ],
+            "html": "<div id=\"add-to-cart-17219913...\" class=\"ins-widget-element i...\" data-apply-to-all=\"button\" data-erase=\"false\" data-removable=\"true\" data-disable-setting...=\"width\" data-add-to-cart-tex...=\"Adicionar ao carrinh...\" data-after-click-tex...=\"Adicionar ao carrinh...\" display=\"always\" tabindex=\"0\" ...>",
+            "failureSummary": "Fix any of the following:\n  Using a negative tabindex on an element inside an interactive control does not prevent assistive technologies from focusing the element (even with aria-hidden=\"true\")"
+          },
+          {
+            "target": [
+              "li[data-group-code=\"35726\"] > div[data-platform=\"web\"] > .ins-element-text.ins-selectable-element[data-no-menu-bar=\"true\"] > .ins-product-content[data-disable-settings=\"height\"][data-selected-layout=\"layout-3-1\"] > .ins-product-element > .ins-wrap-layout-double.ins-erase-container[data-selected-layout=\"layout-2-1\"] > .ins-layout-wrapper[data-element-name=\"Layout\"][data-erase=\"true\"] > .ins-layout-block-wrapper.ins-element-select-menu[data-min-width=\"5\"]:nth-child(1) > div[data-min-height=\"281\"][data-unique-index=\"1\"][data-block-config=\"1.1\"] > .ins-element-image.ins-element-product-image.ins-template-image > .ins-responsive-banner-image[data-element-name=\"Product Image\"][data-variable-name=\"Image\"]"
+            ],
+            "html": "<div id=\"image-1647932527287\" class=\"ins-widget-element i...\" data-override-name=\"true\" data-element-name=\"Product Image\" data-variable-name=\"Image\" data-disable-setting...=\"width\" ondrop=\"return false;\" ondragstart=\"return false;\" data-erase=\"false\" data-removable=\"true\" role=\"img\" ...>",
+            "failureSummary": "Fix any of the following:\n  Element has focusable descendants"
+          },
+          {
+            "target": [
+              "div[ins-product-id=\"35651\"] > .ins-background-image-area.ins-adaptive-button-container.ins-add-to-cart-button"
+            ],
+            "html": "<div id=\"add-to-cart-17219913...\" class=\"ins-widget-element i...\" data-apply-to-all=\"button\" data-erase=\"false\" data-removable=\"true\" data-disable-setting...=\"width\" data-add-to-cart-tex...=\"Adicionar ao carrinh...\" data-after-click-tex...=\"Adicionar ao carrinh...\" display=\"always\" tabindex=\"0\" ...>",
+            "failureSummary": "Fix any of the following:\n  Using a negative tabindex on an element inside an interactive control does not prevent assistive technologies from focusing the element (even with aria-hidden=\"true\")"
+          },
+          {
+            "target": [
+              "li[data-group-code=\"70876\"] > div[data-platform=\"web\"] > .ins-element-text.ins-selectable-element[data-no-menu-bar=\"true\"] > .ins-product-content[data-disable-settings=\"height\"][data-selected-layout=\"layout-3-1\"] > .ins-product-element > .ins-wrap-layout-double.ins-erase-container[data-selected-layout=\"layout-2-1\"] > .ins-layout-wrapper[data-element-name=\"Layout\"][data-erase=\"true\"] > .ins-layout-block-wrapper.ins-element-select-menu[data-min-width=\"5\"]:nth-child(1) > div[data-min-height=\"281\"][data-unique-index=\"1\"][data-block-config=\"1.1\"] > .ins-element-image.ins-element-product-image.ins-template-image > .ins-responsive-banner-image[data-element-name=\"Product Image\"][data-variable-name=\"Image\"]"
+            ],
+            "html": "<div id=\"image-1647932527287\" class=\"ins-widget-element i...\" data-override-name=\"true\" data-element-name=\"Product Image\" data-variable-name=\"Image\" data-disable-setting...=\"width\" ondrop=\"return false;\" ondragstart=\"return false;\" data-erase=\"false\" data-removable=\"true\" role=\"img\" ...>",
+            "failureSummary": "Fix any of the following:\n  Element has focusable descendants"
+          },
+          {
+            "target": [
+              "div[ins-product-id=\"232\"] > .ins-background-image-area.ins-adaptive-button-container.ins-add-to-cart-button"
+            ],
+            "html": "<div id=\"add-to-cart-17219913...\" class=\"ins-widget-element i...\" data-apply-to-all=\"button\" data-erase=\"false\" data-removable=\"true\" data-disable-setting...=\"width\" data-add-to-cart-tex...=\"Adicionar ao carrinh...\" data-after-click-tex...=\"Adicionar ao carrinh...\" display=\"always\" tabindex=\"0\" ...>",
+            "failureSummary": "Fix any of the following:\n  Using a negative tabindex on an element inside an interactive control does not prevent assistive technologies from focusing the element (even with aria-hidden=\"true\")"
+          },
+          {
+            "target": [
+              "li[data-group-code=\"3021\"] > div[data-platform=\"web\"] > .ins-element-text.ins-selectable-element[data-no-menu-bar=\"true\"] > .ins-product-content[data-disable-settings=\"height\"][data-selected-layout=\"layout-3-1\"] > .ins-product-element > .ins-wrap-layout-double.ins-erase-container[data-selected-layout=\"layout-2-1\"] > .ins-layout-wrapper[data-element-name=\"Layout\"][data-erase=\"true\"] > .ins-layout-block-wrapper.ins-element-select-menu[data-min-width=\"5\"]:nth-child(1) > div[data-min-height=\"281\"][data-unique-index=\"1\"][data-block-config=\"1.1\"] > .ins-element-image.ins-element-product-image.ins-template-image > .ins-responsive-banner-image[data-element-name=\"Product Image\"][data-variable-name=\"Image\"]"
+            ],
+            "html": "<div id=\"image-1647932527287\" class=\"ins-widget-element i...\" data-override-name=\"true\" data-element-name=\"Product Image\" data-variable-name=\"Image\" data-disable-setting...=\"width\" ondrop=\"return false;\" ondragstart=\"return false;\" data-erase=\"false\" data-removable=\"true\" role=\"img\" ...>",
+            "failureSummary": "Fix any of the following:\n  Element has focusable descendants"
+          },
+          {
+            "target": [
+              "div[ins-product-id=\"2949\"] > .ins-background-image-area.ins-adaptive-button-container.ins-add-to-cart-button"
+            ],
+            "html": "<div id=\"add-to-cart-17219913...\" class=\"ins-widget-element i...\" data-apply-to-all=\"button\" data-erase=\"false\" data-removable=\"true\" data-disable-setting...=\"width\" data-add-to-cart-tex...=\"Adicionar ao carrinh...\" data-after-click-tex...=\"Adicionar ao carrinh...\" display=\"always\" tabindex=\"0\" ...>",
+            "failureSummary": "Fix any of the following:\n  Using a negative tabindex on an element inside an interactive control does not prevent assistive technologies from focusing the element (even with aria-hidden=\"true\")"
+          },
+          {
+            "target": [
+              "li[data-group-code=\"64394\"] > div[data-platform=\"web\"] > .ins-element-text.ins-selectable-element[data-no-menu-bar=\"true\"] > .ins-product-content[data-disable-settings=\"height\"][data-selected-layout=\"layout-3-1\"] > .ins-product-element > .ins-wrap-layout-double.ins-erase-container[data-selected-layout=\"layout-2-1\"] > .ins-layout-wrapper[data-element-name=\"Layout\"][data-erase=\"true\"] > .ins-layout-block-wrapper.ins-element-select-menu[data-min-width=\"5\"]:nth-child(1) > div[data-min-height=\"281\"][data-unique-index=\"1\"][data-block-config=\"1.1\"] > .ins-element-image.ins-element-product-image.ins-template-image > .ins-responsive-banner-image[data-element-name=\"Product Image\"][data-variable-name=\"Image\"]"
+            ],
+            "html": "<div id=\"image-1647932527287\" class=\"ins-widget-element i...\" data-override-name=\"true\" data-element-name=\"Product Image\" data-variable-name=\"Image\" data-disable-setting...=\"width\" ondrop=\"return false;\" ondragstart=\"return false;\" data-erase=\"false\" data-removable=\"true\" role=\"img\" ...>",
+            "failureSummary": "Fix any of the following:\n  Element has focusable descendants"
+          },
+          {
+            "target": [
+              "div[ins-product-id=\"59847\"] > .ins-background-image-area.ins-adaptive-button-container.ins-add-to-cart-button"
+            ],
+            "html": "<div id=\"add-to-cart-17219913...\" class=\"ins-widget-element i...\" data-apply-to-all=\"button\" data-erase=\"false\" data-removable=\"true\" data-disable-setting...=\"width\" data-add-to-cart-tex...=\"Adicionar ao carrinh...\" data-after-click-tex...=\"Adicionar ao carrinh...\" display=\"always\" tabindex=\"0\" ...>",
+            "failureSummary": "Fix any of the following:\n  Using a negative tabindex on an element inside an interactive control does not prevent assistive technologies from focusing the element (even with aria-hidden=\"true\")"
+          },
+          {
+            "target": [
+              "li[data-group-code=\"33399\"] > div[data-platform=\"web\"] > .ins-element-text.ins-selectable-element[data-no-menu-bar=\"true\"] > .ins-product-content[data-disable-settings=\"height\"][data-selected-layout=\"layout-3-1\"] > .ins-product-element > .ins-wrap-layout-double.ins-erase-container[data-selected-layout=\"layout-2-1\"] > .ins-layout-wrapper[data-element-name=\"Layout\"][data-erase=\"true\"] > .ins-layout-block-wrapper.ins-element-select-menu[data-min-width=\"5\"]:nth-child(1) > div[data-min-height=\"281\"][data-unique-index=\"1\"][data-block-config=\"1.1\"] > .ins-element-image.ins-element-product-image.ins-template-image > .ins-responsive-banner-image[data-element-name=\"Product Image\"][data-variable-name=\"Image\"]"
+            ],
+            "html": "<div id=\"image-1647932527287\" class=\"ins-widget-element i...\" data-override-name=\"true\" data-element-name=\"Product Image\" data-variable-name=\"Image\" data-disable-setting...=\"width\" ondrop=\"return false;\" ondragstart=\"return false;\" data-erase=\"false\" data-removable=\"true\" role=\"img\" ...>",
+            "failureSummary": "Fix any of the following:\n  Element has focusable descendants"
+          },
+          {
+            "target": [
+              "div[ins-product-id=\"33319\"] > .ins-background-image-area.ins-adaptive-button-container.ins-add-to-cart-button"
+            ],
+            "html": "<div id=\"add-to-cart-17219913...\" class=\"ins-widget-element i...\" data-apply-to-all=\"button\" data-erase=\"false\" data-removable=\"true\" data-disable-setting...=\"width\" data-add-to-cart-tex...=\"Adicionar ao carrinh...\" data-after-click-tex...=\"Adicionar ao carrinh...\" display=\"always\" tabindex=\"0\" ...>",
+            "failureSummary": "Fix any of the following:\n  Using a negative tabindex on an element inside an interactive control does not prevent assistive technologies from focusing the element (even with aria-hidden=\"true\")"
+          },
+          {
+            "target": [
+              "li[data-group-code=\"68461\"] > div[data-platform=\"web\"] > .ins-element-text.ins-selectable-element[data-no-menu-bar=\"true\"] > .ins-product-content[data-disable-settings=\"height\"][data-selected-layout=\"layout-3-1\"] > .ins-product-element > .ins-wrap-layout-double.ins-erase-container[data-selected-layout=\"layout-2-1\"] > .ins-layout-wrapper[data-element-name=\"Layout\"][data-erase=\"true\"] > .ins-layout-block-wrapper.ins-element-select-menu[data-min-width=\"5\"]:nth-child(1) > div[data-min-height=\"281\"][data-unique-index=\"1\"][data-block-config=\"1.1\"] > .ins-element-image.ins-element-product-image.ins-template-image > .ins-responsive-banner-image[data-element-name=\"Product Image\"][data-variable-name=\"Image\"]"
+            ],
+            "html": "<div id=\"image-1647932527287\" class=\"ins-widget-element i...\" data-override-name=\"true\" data-element-name=\"Product Image\" data-variable-name=\"Image\" data-disable-setting...=\"width\" ondrop=\"return false;\" ondragstart=\"return false;\" data-erase=\"false\" data-removable=\"true\" role=\"img\" ...>",
+            "failureSummary": "Fix any of the following:\n  Element has focusable descendants"
+          },
+          {
+            "target": [
+              "div[ins-product-id=\"23861\"] > .ins-background-image-area.ins-adaptive-button-container.ins-add-to-cart-button"
+            ],
+            "html": "<div id=\"add-to-cart-17219913...\" class=\"ins-widget-element i...\" data-apply-to-all=\"button\" data-erase=\"false\" data-removable=\"true\" data-disable-setting...=\"width\" data-add-to-cart-tex...=\"Adicionar ao carrinh...\" data-after-click-tex...=\"Adicionar ao carrinh...\" display=\"always\" tabindex=\"0\" ...>",
+            "failureSummary": "Fix any of the following:\n  Using a negative tabindex on an element inside an interactive control does not prevent assistive technologies from focusing the element (even with aria-hidden=\"true\")"
+          },
+          {
+            "target": [
+              "li[data-group-code=\"8974\"] > div[data-platform=\"web\"] > .ins-element-text.ins-selectable-element[data-no-menu-bar=\"true\"] > .ins-product-content[data-disable-settings=\"height\"][data-selected-layout=\"layout-3-1\"] > .ins-product-element > .ins-wrap-layout-double.ins-erase-container[data-selected-layout=\"layout-2-1\"] > .ins-layout-wrapper[data-element-name=\"Layout\"][data-erase=\"true\"] > .ins-layout-block-wrapper.ins-element-select-menu[data-min-width=\"5\"]:nth-child(1) > div[data-min-height=\"281\"][data-unique-index=\"1\"][data-block-config=\"1.1\"] > .ins-element-image.ins-element-product-image.ins-template-image > .ins-responsive-banner-image[data-element-name=\"Product Image\"][data-variable-name=\"Image\"]"
+            ],
+            "html": "<div id=\"image-1647932527287\" class=\"ins-widget-element i...\" data-override-name=\"true\" data-element-name=\"Product Image\" data-variable-name=\"Image\" data-disable-setting...=\"width\" ondrop=\"return false;\" ondragstart=\"return false;\" data-erase=\"false\" data-removable=\"true\" role=\"img\" ...>",
+            "failureSummary": "Fix any of the following:\n  Element has focusable descendants"
+          },
+          {
+            "target": [
+              "div[ins-product-id=\"8924\"] > .ins-background-image-area.ins-adaptive-button-container.ins-add-to-cart-button"
+            ],
+            "html": "<div id=\"add-to-cart-17219913...\" class=\"ins-widget-element i...\" data-apply-to-all=\"button\" data-erase=\"false\" data-removable=\"true\" data-disable-setting...=\"width\" data-add-to-cart-tex...=\"Adicionar ao carrinh...\" data-after-click-tex...=\"Adicionar ao carrinh...\" display=\"always\" tabindex=\"0\" ...>",
+            "failureSummary": "Fix any of the following:\n  Using a negative tabindex on an element inside an interactive control does not prevent assistive technologies from focusing the element (even with aria-hidden=\"true\")"
+          },
+          {
+            "target": [
+              "li[data-group-code=\"16418\"] > div[data-platform=\"web\"] > .ins-element-text.ins-selectable-element[data-no-menu-bar=\"true\"] > .ins-product-content[data-disable-settings=\"height\"][data-selected-layout=\"layout-3-1\"] > .ins-product-element > .ins-wrap-layout-double.ins-erase-container[data-selected-layout=\"layout-2-1\"] > .ins-layout-wrapper[data-element-name=\"Layout\"][data-erase=\"true\"] > .ins-layout-block-wrapper.ins-element-select-menu[data-min-width=\"5\"]:nth-child(1) > div[data-min-height=\"281\"][data-unique-index=\"1\"][data-block-config=\"1.1\"] > .ins-element-image.ins-element-product-image.ins-template-image > .ins-responsive-banner-image[data-element-name=\"Product Image\"][data-variable-name=\"Image\"]"
+            ],
+            "html": "<div id=\"image-1647932527287\" class=\"ins-widget-element i...\" data-override-name=\"true\" data-element-name=\"Product Image\" data-variable-name=\"Image\" data-disable-setting...=\"width\" ondrop=\"return false;\" ondragstart=\"return false;\" data-erase=\"false\" data-removable=\"true\" role=\"img\" ...>",
+            "failureSummary": "Fix any of the following:\n  Element has focusable descendants"
+          },
+          {
+            "target": [
+              "div[ins-product-id=\"16365\"] > .ins-background-image-area.ins-adaptive-button-container.ins-add-to-cart-button"
+            ],
+            "html": "<div id=\"add-to-cart-17219913...\" class=\"ins-widget-element i...\" data-apply-to-all=\"button\" data-erase=\"false\" data-removable=\"true\" data-disable-setting...=\"width\" data-add-to-cart-tex...=\"Adicionar ao carrinh...\" data-after-click-tex...=\"Adicionar ao carrinh...\" display=\"always\" tabindex=\"0\" ...>",
+            "failureSummary": "Fix any of the following:\n  Using a negative tabindex on an element inside an interactive control does not prevent assistive technologies from focusing the element (even with aria-hidden=\"true\")"
+          },
+          {
+            "target": [
+              "li[data-group-code=\"59354\"] > div[data-platform=\"web\"] > .ins-element-text.ins-selectable-element[data-no-menu-bar=\"true\"] > .ins-product-content[data-disable-settings=\"height\"][data-selected-layout=\"layout-3-1\"] > .ins-product-element > .ins-wrap-layout-double.ins-erase-container[data-selected-layout=\"layout-2-1\"] > .ins-layout-wrapper[data-element-name=\"Layout\"][data-erase=\"true\"] > .ins-layout-block-wrapper.ins-element-select-menu[data-min-width=\"5\"]:nth-child(1) > div[data-min-height=\"281\"][data-unique-index=\"1\"][data-block-config=\"1.1\"] > .ins-element-image.ins-element-product-image.ins-template-image > .ins-responsive-banner-image[data-element-name=\"Product Image\"][data-variable-name=\"Image\"]"
+            ],
+            "html": "<div id=\"image-1647932527287\" class=\"ins-widget-element i...\" data-override-name=\"true\" data-element-name=\"Product Image\" data-variable-name=\"Image\" data-disable-setting...=\"width\" ondrop=\"return false;\" ondragstart=\"return false;\" data-erase=\"false\" data-removable=\"true\" role=\"img\" ...>",
+            "failureSummary": "Fix any of the following:\n  Element has focusable descendants"
+          },
+          {
+            "target": [
+              "div[ins-product-id=\"78769\"] > .ins-background-image-area.ins-adaptive-button-container.ins-add-to-cart-button"
+            ],
+            "html": "<div id=\"add-to-cart-17219913...\" class=\"ins-widget-element i...\" data-apply-to-all=\"button\" data-erase=\"false\" data-removable=\"true\" data-disable-setting...=\"width\" data-add-to-cart-tex...=\"Adicionar ao carrinh...\" data-after-click-tex...=\"Adicionar ao carrinh...\" display=\"always\" tabindex=\"0\" ...>",
+            "failureSummary": "Fix any of the following:\n  Using a negative tabindex on an element inside an interactive control does not prevent assistive technologies from focusing the element (even with aria-hidden=\"true\")"
+          },
+          {
+            "target": [
+              "li[data-group-code=\"4437\"] > div[data-platform=\"web\"] > .ins-element-text.ins-selectable-element[data-no-menu-bar=\"true\"] > .ins-product-content[data-disable-settings=\"height\"][data-selected-layout=\"layout-3-1\"] > .ins-product-element > .ins-wrap-layout-double.ins-erase-container[data-selected-layout=\"layout-2-1\"] > .ins-layout-wrapper[data-element-name=\"Layout\"][data-erase=\"true\"] > .ins-layout-block-wrapper.ins-element-select-menu[data-min-width=\"5\"]:nth-child(1) > div[data-min-height=\"281\"][data-unique-index=\"1\"][data-block-config=\"1.1\"] > .ins-element-image.ins-element-product-image.ins-template-image > .ins-responsive-banner-image[data-element-name=\"Product Image\"][data-variable-name=\"Image\"]"
+            ],
+            "html": "<div id=\"image-1647932527287\" class=\"ins-widget-element i...\" data-override-name=\"true\" data-element-name=\"Product Image\" data-variable-name=\"Image\" data-disable-setting...=\"width\" ondrop=\"return false;\" ondragstart=\"return false;\" data-erase=\"false\" data-removable=\"true\" role=\"img\" ...>",
+            "failureSummary": "Fix any of the following:\n  Element has focusable descendants"
+          },
+          {
+            "target": [
+              "div[ins-product-id=\"4379\"] > .ins-background-image-area.ins-adaptive-button-container.ins-add-to-cart-button"
+            ],
+            "html": "<div id=\"add-to-cart-17219913...\" class=\"ins-widget-element i...\" data-apply-to-all=\"button\" data-erase=\"false\" data-removable=\"true\" data-disable-setting...=\"width\" data-add-to-cart-tex...=\"Adicionar ao carrinh...\" data-after-click-tex...=\"Adicionar ao carrinh...\" display=\"always\" tabindex=\"0\" ...>",
+            "failureSummary": "Fix any of the following:\n  Using a negative tabindex on an element inside an interactive control does not prevent assistive technologies from focusing the element (even with aria-hidden=\"true\")"
+          },
+          {
+            "target": [
+              "li[data-group-code=\"56416\"] > div[data-platform=\"web\"] > .ins-element-text.ins-selectable-element[data-no-menu-bar=\"true\"] > .ins-product-content[data-disable-settings=\"height\"][data-selected-layout=\"layout-3-1\"] > .ins-product-element > .ins-wrap-layout-double.ins-erase-container[data-selected-layout=\"layout-2-1\"] > .ins-layout-wrapper[data-element-name=\"Layout\"][data-erase=\"true\"] > .ins-layout-block-wrapper.ins-element-select-menu[data-min-width=\"5\"]:nth-child(1) > div[data-min-height=\"281\"][data-unique-index=\"1\"][data-block-config=\"1.1\"] > .ins-element-image.ins-element-product-image.ins-template-image > .ins-responsive-banner-image[data-element-name=\"Product Image\"][data-variable-name=\"Image\"]"
+            ],
+            "html": "<div id=\"image-1647932527287\" class=\"ins-widget-element i...\" data-override-name=\"true\" data-element-name=\"Product Image\" data-variable-name=\"Image\" data-disable-setting...=\"width\" ondrop=\"return false;\" ondragstart=\"return false;\" data-erase=\"false\" data-removable=\"true\" role=\"img\" ...>",
+            "failureSummary": "Fix any of the following:\n  Element has focusable descendants"
+          },
+          {
+            "target": [
+              "div[ins-product-id=\"66658\"] > .ins-background-image-area.ins-adaptive-button-container.ins-add-to-cart-button"
+            ],
+            "html": "<div id=\"add-to-cart-17219913...\" class=\"ins-widget-element i...\" data-apply-to-all=\"button\" data-erase=\"false\" data-removable=\"true\" data-disable-setting...=\"width\" data-add-to-cart-tex...=\"Adicionar ao carrinh...\" data-after-click-tex...=\"Adicionar ao carrinh...\" display=\"always\" tabindex=\"0\" ...>",
+            "failureSummary": "Fix any of the following:\n  Using a negative tabindex on an element inside an interactive control does not prevent assistive technologies from focusing the element (even with aria-hidden=\"true\")"
+          },
+          {
+            "target": [
+              "li[data-group-code=\"64382\"] > div[data-platform=\"web\"] > .ins-element-text.ins-selectable-element[data-no-menu-bar=\"true\"] > .ins-product-content[data-disable-settings=\"height\"][data-selected-layout=\"layout-3-1\"] > .ins-product-element > .ins-wrap-layout-double.ins-erase-container[data-selected-layout=\"layout-2-1\"] > .ins-layout-wrapper[data-element-name=\"Layout\"][data-erase=\"true\"] > .ins-layout-block-wrapper.ins-element-select-menu[data-min-width=\"5\"]:nth-child(1) > div[data-min-height=\"281\"][data-unique-index=\"1\"][data-block-config=\"1.1\"] > .ins-element-image.ins-element-product-image.ins-template-image > .ins-responsive-banner-image[data-element-name=\"Product Image\"][data-variable-name=\"Image\"]"
+            ],
+            "html": "<div id=\"image-1647932527287\" class=\"ins-widget-element i...\" data-override-name=\"true\" data-element-name=\"Product Image\" data-variable-name=\"Image\" data-disable-setting...=\"width\" ondrop=\"return false;\" ondragstart=\"return false;\" data-erase=\"false\" data-removable=\"true\" role=\"img\" ...>",
+            "failureSummary": "Fix any of the following:\n  Element has focusable descendants"
+          },
+          {
+            "target": [
+              "div[ins-product-id=\"76943\"] > .ins-background-image-area.ins-adaptive-button-container.ins-add-to-cart-button"
+            ],
+            "html": "<div id=\"add-to-cart-17219913...\" class=\"ins-widget-element i...\" data-apply-to-all=\"button\" data-erase=\"false\" data-removable=\"true\" data-disable-setting...=\"width\" data-add-to-cart-tex...=\"Adicionar ao carrinh...\" data-after-click-tex...=\"Adicionar ao carrinh...\" display=\"always\" tabindex=\"0\" ...>",
+            "failureSummary": "Fix any of the following:\n  Using a negative tabindex on an element inside an interactive control does not prevent assistive technologies from focusing the element (even with aria-hidden=\"true\")"
+          },
+          {
+            "target": [
+              "li[data-group-code=\"61309\"] > div[data-platform=\"web\"] > .ins-element-text.ins-selectable-element[data-no-menu-bar=\"true\"] > .ins-product-content[data-disable-settings=\"height\"][data-selected-layout=\"layout-3-1\"] > .ins-product-element > .ins-wrap-layout-double.ins-erase-container[data-selected-layout=\"layout-2-1\"] > .ins-layout-wrapper[data-element-name=\"Layout\"][data-erase=\"true\"] > .ins-layout-block-wrapper.ins-element-select-menu[data-min-width=\"5\"]:nth-child(1) > div[data-min-height=\"281\"][data-unique-index=\"1\"][data-block-config=\"1.1\"] > .ins-element-image.ins-element-product-image.ins-template-image > .ins-responsive-banner-image[data-element-name=\"Product Image\"][data-variable-name=\"Image\"]"
+            ],
+            "html": "<div id=\"image-1647932527287\" class=\"ins-widget-element i...\" data-override-name=\"true\" data-element-name=\"Product Image\" data-variable-name=\"Image\" data-disable-setting...=\"width\" ondrop=\"return false;\" ondragstart=\"return false;\" data-erase=\"false\" data-removable=\"true\" role=\"img\" ...>",
+            "failureSummary": "Fix any of the following:\n  Element has focusable descendants"
+          },
+          {
+            "target": [
+              "div[ins-product-id=\"82598\"] > .ins-background-image-area.ins-adaptive-button-container.ins-add-to-cart-button"
+            ],
+            "html": "<div id=\"add-to-cart-17219913...\" class=\"ins-widget-element i...\" data-apply-to-all=\"button\" data-erase=\"false\" data-removable=\"true\" data-disable-setting...=\"width\" data-add-to-cart-tex...=\"Adicionar ao carrinh...\" data-after-click-tex...=\"Adicionar ao carrinh...\" display=\"always\" tabindex=\"0\" ...>",
+            "failureSummary": "Fix any of the following:\n  Using a negative tabindex on an element inside an interactive control does not prevent assistive technologies from focusing the element (even with aria-hidden=\"true\")"
+          },
+          {
+            "target": [
+              "li[data-group-code=\"66408\"] > div[data-platform=\"web\"] > .ins-element-text.ins-selectable-element[data-no-menu-bar=\"true\"] > .ins-product-content[data-disable-settings=\"height\"][data-selected-layout=\"layout-3-1\"] > .ins-product-element > .ins-wrap-layout-double.ins-erase-container[data-selected-layout=\"layout-2-1\"] > .ins-layout-wrapper[data-element-name=\"Layout\"][data-erase=\"true\"] > .ins-layout-block-wrapper.ins-element-select-menu[data-min-width=\"5\"]:nth-child(1) > div[data-min-height=\"281\"][data-unique-index=\"1\"][data-block-config=\"1.1\"] > .ins-element-image.ins-element-product-image.ins-template-image > .ins-responsive-banner-image[data-element-name=\"Product Image\"][data-variable-name=\"Image\"]"
+            ],
+            "html": "<div id=\"image-1647932527287\" class=\"ins-widget-element i...\" data-override-name=\"true\" data-element-name=\"Product Image\" data-variable-name=\"Image\" data-disable-setting...=\"width\" ondrop=\"return false;\" ondragstart=\"return false;\" data-erase=\"false\" data-removable=\"true\" role=\"img\" ...>",
+            "failureSummary": "Fix any of the following:\n  Element has focusable descendants"
+          },
+          {
+            "target": [
+              "div[ins-product-id=\"5050\"] > .ins-background-image-area.ins-adaptive-button-container.ins-add-to-cart-button"
+            ],
+            "html": "<div id=\"add-to-cart-17219913...\" class=\"ins-widget-element i...\" data-apply-to-all=\"button\" data-erase=\"false\" data-removable=\"true\" data-disable-setting...=\"width\" data-add-to-cart-tex...=\"Adicionar ao carrinh...\" data-after-click-tex...=\"Adicionar ao carrinh...\" display=\"always\" tabindex=\"0\" ...>",
+            "failureSummary": "Fix any of the following:\n  Using a negative tabindex on an element inside an interactive control does not prevent assistive technologies from focusing the element (even with aria-hidden=\"true\")"
+          },
+          {
+            "target": [
+              "li[data-group-code=\"70870\"] > div[data-platform=\"web\"] > .ins-element-text.ins-selectable-element[data-no-menu-bar=\"true\"] > .ins-product-content[data-disable-settings=\"height\"][data-selected-layout=\"layout-3-1\"] > .ins-product-element > .ins-wrap-layout-double.ins-erase-container[data-selected-layout=\"layout-2-1\"] > .ins-layout-wrapper[data-element-name=\"Layout\"][data-erase=\"true\"] > .ins-layout-block-wrapper.ins-element-select-menu[data-min-width=\"5\"]:nth-child(1) > div[data-min-height=\"281\"][data-unique-index=\"1\"][data-block-config=\"1.1\"] > .ins-element-image.ins-element-product-image.ins-template-image > .ins-responsive-banner-image[data-element-name=\"Product Image\"][data-variable-name=\"Image\"]"
+            ],
+            "html": "<div id=\"image-1647932527287\" class=\"ins-widget-element i...\" data-override-name=\"true\" data-element-name=\"Product Image\" data-variable-name=\"Image\" data-disable-setting...=\"width\" ondrop=\"return false;\" ondragstart=\"return false;\" data-erase=\"false\" data-removable=\"true\" role=\"img\" ...>",
+            "failureSummary": "Fix any of the following:\n  Element has focusable descendants"
+          },
+          {
+            "target": [
+              "div[ins-product-id=\"12930\"] > .ins-background-image-area.ins-adaptive-button-container.ins-add-to-cart-button"
+            ],
+            "html": "<div id=\"add-to-cart-17219913...\" class=\"ins-widget-element i...\" data-apply-to-all=\"button\" data-erase=\"false\" data-removable=\"true\" data-disable-setting...=\"width\" data-add-to-cart-tex...=\"Adicionar ao carrinh...\" data-after-click-tex...=\"Adicionar ao carrinh...\" display=\"always\" tabindex=\"0\" ...>",
+            "failureSummary": "Fix any of the following:\n  Using a negative tabindex on an element inside an interactive control does not prevent assistive technologies from focusing the element (even with aria-hidden=\"true\")"
+          },
+          {
+            "target": [
+              "li[data-group-code=\"9642\"] > div[data-platform=\"web\"] > .ins-element-text.ins-selectable-element[data-no-menu-bar=\"true\"] > .ins-product-content[data-disable-settings=\"height\"][data-selected-layout=\"layout-3-1\"] > .ins-product-element > .ins-wrap-layout-double.ins-erase-container[data-selected-layout=\"layout-2-1\"] > .ins-layout-wrapper[data-element-name=\"Layout\"][data-erase=\"true\"] > .ins-layout-block-wrapper.ins-element-select-menu[data-min-width=\"5\"]:nth-child(1) > div[data-min-height=\"281\"][data-unique-index=\"1\"][data-block-config=\"1.1\"] > .ins-element-image.ins-element-product-image.ins-template-image > .ins-responsive-banner-image[data-element-name=\"Product Image\"][data-variable-name=\"Image\"]"
+            ],
+            "html": "<div id=\"image-1647932527287\" class=\"ins-widget-element i...\" data-override-name=\"true\" data-element-name=\"Product Image\" data-variable-name=\"Image\" data-disable-setting...=\"width\" ondrop=\"return false;\" ondragstart=\"return false;\" data-erase=\"false\" data-removable=\"true\" role=\"img\" ...>",
+            "failureSummary": "Fix any of the following:\n  Element has focusable descendants"
+          },
+          {
+            "target": [
+              "div[ins-product-id=\"9602\"] > .ins-background-image-area.ins-adaptive-button-container.ins-add-to-cart-button"
+            ],
+            "html": "<div id=\"add-to-cart-17219913...\" class=\"ins-widget-element i...\" data-apply-to-all=\"button\" data-erase=\"false\" data-removable=\"true\" data-disable-setting...=\"width\" data-add-to-cart-tex...=\"Adicionar ao carrinh...\" data-after-click-tex...=\"Adicionar ao carrinh...\" display=\"always\" tabindex=\"0\" ...>",
+            "failureSummary": "Fix any of the following:\n  Using a negative tabindex on an element inside an interactive control does not prevent assistive technologies from focusing the element (even with aria-hidden=\"true\")"
+          },
+          {
+            "target": [
+              "li[data-group-code=\"68463\"] > div[data-platform=\"web\"] > .ins-element-text.ins-selectable-element[data-no-menu-bar=\"true\"] > .ins-product-content[data-disable-settings=\"height\"][data-selected-layout=\"layout-3-1\"] > .ins-product-element > .ins-wrap-layout-double.ins-erase-container[data-selected-layout=\"layout-2-1\"] > .ins-layout-wrapper[data-element-name=\"Layout\"][data-erase=\"true\"] > .ins-layout-block-wrapper.ins-element-select-menu[data-min-width=\"5\"]:nth-child(1) > div[data-min-height=\"281\"][data-unique-index=\"1\"][data-block-config=\"1.1\"] > .ins-element-image.ins-element-product-image.ins-template-image > .ins-responsive-banner-image[data-element-name=\"Product Image\"][data-variable-name=\"Image\"]"
+            ],
+            "html": "<div id=\"image-1647932527287\" class=\"ins-widget-element i...\" data-override-name=\"true\" data-element-name=\"Product Image\" data-variable-name=\"Image\" data-disable-setting...=\"width\" ondrop=\"return false;\" ondragstart=\"return false;\" data-erase=\"false\" data-removable=\"true\" role=\"img\" ...>",
+            "failureSummary": "Fix any of the following:\n  Element has focusable descendants"
+          },
+          {
+            "target": [
+              "div[ins-product-id=\"73683\"] > .ins-background-image-area.ins-adaptive-button-container.ins-add-to-cart-button"
+            ],
+            "html": "<div id=\"add-to-cart-17219913...\" class=\"ins-widget-element i...\" data-apply-to-all=\"button\" data-erase=\"false\" data-removable=\"true\" data-disable-setting...=\"width\" data-add-to-cart-tex...=\"Adicionar ao carrinh...\" data-after-click-tex...=\"Adicionar ao carrinh...\" display=\"always\" tabindex=\"0\" ...>",
+            "failureSummary": "Fix any of the following:\n  Using a negative tabindex on an element inside an interactive control does not prevent assistive technologies from focusing the element (even with aria-hidden=\"true\")"
+          },
+          {
+            "target": [
+              "li[data-group-code=\"36796\"] > div[data-platform=\"web\"] > .ins-element-text.ins-selectable-element[data-no-menu-bar=\"true\"] > .ins-product-content[data-disable-settings=\"height\"][data-selected-layout=\"layout-3-1\"] > .ins-product-element > .ins-wrap-layout-double.ins-erase-container[data-selected-layout=\"layout-2-1\"] > .ins-layout-wrapper[data-element-name=\"Layout\"][data-erase=\"true\"] > .ins-layout-block-wrapper.ins-element-select-menu[data-min-width=\"5\"]:nth-child(1) > div[data-min-height=\"281\"][data-unique-index=\"1\"][data-block-config=\"1.1\"] > .ins-element-image.ins-element-product-image.ins-template-image > .ins-responsive-banner-image[data-element-name=\"Product Image\"][data-variable-name=\"Image\"]"
+            ],
+            "html": "<div id=\"image-1647932527287\" class=\"ins-widget-element i...\" data-override-name=\"true\" data-element-name=\"Product Image\" data-variable-name=\"Image\" data-disable-setting...=\"width\" ondrop=\"return false;\" ondragstart=\"return false;\" data-erase=\"false\" data-removable=\"true\" role=\"img\" ...>",
+            "failureSummary": "Fix any of the following:\n  Element has focusable descendants"
+          },
+          {
+            "target": [
+              "div[ins-product-id=\"36707\"] > .ins-background-image-area.ins-adaptive-button-container.ins-add-to-cart-button"
+            ],
+            "html": "<div id=\"add-to-cart-17219913...\" class=\"ins-widget-element i...\" data-apply-to-all=\"button\" data-erase=\"false\" data-removable=\"true\" data-disable-setting...=\"width\" data-add-to-cart-tex...=\"Adicionar ao carrinh...\" data-after-click-tex...=\"Adicionar ao carrinh...\" display=\"always\" tabindex=\"0\" ...>",
+            "failureSummary": "Fix any of the following:\n  Using a negative tabindex on an element inside an interactive control does not prevent assistive technologies from focusing the element (even with aria-hidden=\"true\")"
+          },
+          {
+            "target": [
+              "li[data-group-code=\"27330\"] > div[data-platform=\"web\"] > .ins-element-text.ins-selectable-element[data-no-menu-bar=\"true\"] > .ins-product-content[data-disable-settings=\"height\"][data-selected-layout=\"layout-3-1\"] > .ins-product-element > .ins-wrap-layout-double.ins-erase-container[data-selected-layout=\"layout-2-1\"] > .ins-layout-wrapper[data-element-name=\"Layout\"][data-erase=\"true\"] > .ins-layout-block-wrapper.ins-element-select-menu[data-min-width=\"5\"]:nth-child(1) > div[data-min-height=\"281\"][data-unique-index=\"1\"][data-block-config=\"1.1\"] > .ins-element-image.ins-element-product-image.ins-template-image > .ins-responsive-banner-image[data-element-name=\"Product Image\"][data-variable-name=\"Image\"]"
+            ],
+            "html": "<div id=\"image-1647932527287\" class=\"ins-widget-element i...\" data-override-name=\"true\" data-element-name=\"Product Image\" data-variable-name=\"Image\" data-disable-setting...=\"width\" ondrop=\"return false;\" ondragstart=\"return false;\" data-erase=\"false\" data-removable=\"true\" role=\"img\" ...>",
+            "failureSummary": "Fix any of the following:\n  Element has focusable descendants"
+          },
+          {
+            "target": [
+              "div[ins-product-id=\"27256\"] > .ins-background-image-area.ins-adaptive-button-container.ins-add-to-cart-button"
+            ],
+            "html": "<div id=\"add-to-cart-17219913...\" class=\"ins-widget-element i...\" data-apply-to-all=\"button\" data-erase=\"false\" data-removable=\"true\" data-disable-setting...=\"width\" data-add-to-cart-tex...=\"Adicionar ao carrinh...\" data-after-click-tex...=\"Adicionar ao carrinh...\" display=\"always\" tabindex=\"0\" ...>",
+            "failureSummary": "Fix any of the following:\n  Using a negative tabindex on an element inside an interactive control does not prevent assistive technologies from focusing the element (even with aria-hidden=\"true\")"
+          },
+          {
+            "target": [
+              "li[data-group-code=\"8645\"] > div[data-platform=\"web\"] > .ins-element-text.ins-selectable-element[data-no-menu-bar=\"true\"] > .ins-product-content[data-disable-settings=\"height\"][data-selected-layout=\"layout-3-1\"] > .ins-product-element > .ins-wrap-layout-double.ins-erase-container[data-selected-layout=\"layout-2-1\"] > .ins-layout-wrapper[data-element-name=\"Layout\"][data-erase=\"true\"] > .ins-layout-block-wrapper.ins-element-select-menu[data-min-width=\"5\"]:nth-child(1) > div[data-min-height=\"281\"][data-unique-index=\"1\"][data-block-config=\"1.1\"] > .ins-element-image.ins-element-product-image.ins-template-image > .ins-responsive-banner-image[data-element-name=\"Product Image\"][data-variable-name=\"Image\"]"
+            ],
+            "html": "<div id=\"image-1647932527287\" class=\"ins-widget-element i...\" data-override-name=\"true\" data-element-name=\"Product Image\" data-variable-name=\"Image\" data-disable-setting...=\"width\" ondrop=\"return false;\" ondragstart=\"return false;\" data-erase=\"false\" data-removable=\"true\" role=\"img\" ...>",
+            "failureSummary": "Fix any of the following:\n  Element has focusable descendants"
+          },
+          {
+            "target": [
+              "div[ins-product-id=\"8591\"] > .ins-background-image-area.ins-adaptive-button-container.ins-add-to-cart-button"
+            ],
+            "html": "<div id=\"add-to-cart-17219913...\" class=\"ins-widget-element i...\" data-apply-to-all=\"button\" data-erase=\"false\" data-removable=\"true\" data-disable-setting...=\"width\" data-add-to-cart-tex...=\"Adicionar ao carrinh...\" data-after-click-tex...=\"Adicionar ao carrinh...\" display=\"always\" tabindex=\"0\" ...>",
+            "failureSummary": "Fix any of the following:\n  Using a negative tabindex on an element inside an interactive control does not prevent assistive technologies from focusing the element (even with aria-hidden=\"true\")"
+          },
+          {
+            "target": [
+              "li[data-group-code=\"70984\"] > div[data-platform=\"web\"] > .ins-element-text.ins-selectable-element[data-no-menu-bar=\"true\"] > .ins-product-content[data-disable-settings=\"height\"][data-selected-layout=\"layout-3-1\"] > .ins-product-element > .ins-wrap-layout-double.ins-erase-container[data-selected-layout=\"layout-2-1\"] > .ins-layout-wrapper[data-element-name=\"Layout\"][data-erase=\"true\"] > .ins-layout-block-wrapper.ins-element-select-menu[data-min-width=\"5\"]:nth-child(1) > div[data-min-height=\"281\"][data-unique-index=\"1\"][data-block-config=\"1.1\"] > .ins-element-image.ins-element-product-image.ins-template-image > .ins-responsive-banner-image[data-element-name=\"Product Image\"][data-variable-name=\"Image\"]"
+            ],
+            "html": "<div id=\"image-1647932527287\" class=\"ins-widget-element i...\" data-override-name=\"true\" data-element-name=\"Product Image\" data-variable-name=\"Image\" data-disable-setting...=\"width\" ondrop=\"return false;\" ondragstart=\"return false;\" data-erase=\"false\" data-removable=\"true\" role=\"img\" ...>",
+            "failureSummary": "Fix any of the following:\n  Element has focusable descendants"
+          },
+          {
+            "target": [
+              "div[ins-product-id=\"93878\"] > .ins-background-image-area.ins-adaptive-button-container.ins-add-to-cart-button"
+            ],
+            "html": "<div id=\"add-to-cart-17219913...\" class=\"ins-widget-element i...\" data-apply-to-all=\"button\" data-erase=\"false\" data-removable=\"true\" data-disable-setting...=\"width\" data-add-to-cart-tex...=\"Adicionar ao carrinh...\" data-after-click-tex...=\"Adicionar ao carrinh...\" display=\"always\" tabindex=\"0\" ...>",
+            "failureSummary": "Fix any of the following:\n  Using a negative tabindex on an element inside an interactive control does not prevent assistive technologies from focusing the element (even with aria-hidden=\"true\")"
+          },
+          {
+            "target": [
+              "li[data-group-code=\"62556\"] > div[data-platform=\"web\"] > .ins-element-text.ins-selectable-element[data-no-menu-bar=\"true\"] > .ins-product-content[data-disable-settings=\"height\"][data-selected-layout=\"layout-3-1\"] > .ins-product-element > .ins-wrap-layout-double.ins-erase-container[data-selected-layout=\"layout-2-1\"] > .ins-layout-wrapper[data-element-name=\"Layout\"][data-erase=\"true\"] > .ins-layout-block-wrapper.ins-element-select-menu[data-min-width=\"5\"]:nth-child(1) > div[data-min-height=\"281\"][data-unique-index=\"1\"][data-block-config=\"1.1\"] > .ins-element-image.ins-element-product-image.ins-template-image > .ins-responsive-banner-image[data-element-name=\"Product Image\"][data-variable-name=\"Image\"]"
+            ],
+            "html": "<div id=\"image-1647932527287\" class=\"ins-widget-element i...\" data-override-name=\"true\" data-element-name=\"Product Image\" data-variable-name=\"Image\" data-disable-setting...=\"width\" ondrop=\"return false;\" ondragstart=\"return false;\" data-erase=\"false\" data-removable=\"true\" role=\"img\" ...>",
+            "failureSummary": "Fix any of the following:\n  Element has focusable descendants"
+          },
+          {
+            "target": [
+              "div[ins-product-id=\"84961\"] > .ins-background-image-area.ins-adaptive-button-container.ins-add-to-cart-button"
+            ],
+            "html": "<div id=\"add-to-cart-17219913...\" class=\"ins-widget-element i...\" data-apply-to-all=\"button\" data-erase=\"false\" data-removable=\"true\" data-disable-setting...=\"width\" data-add-to-cart-tex...=\"Adicionar ao carrinh...\" data-after-click-tex...=\"Adicionar ao carrinh...\" display=\"always\" tabindex=\"0\" ...>",
+            "failureSummary": "Fix any of the following:\n  Using a negative tabindex on an element inside an interactive control does not prevent assistive technologies from focusing the element (even with aria-hidden=\"true\")"
+          },
+          {
+            "target": [
+              "li[data-group-code=\"31616\"] > div[data-platform=\"web\"] > .ins-element-text.ins-selectable-element[data-no-menu-bar=\"true\"] > .ins-product-content[data-disable-settings=\"height\"][data-selected-layout=\"layout-3-1\"] > .ins-product-element > .ins-wrap-layout-double.ins-erase-container[data-selected-layout=\"layout-2-1\"] > .ins-layout-wrapper[data-element-name=\"Layout\"][data-erase=\"true\"] > .ins-layout-block-wrapper.ins-element-select-menu[data-min-width=\"5\"]:nth-child(1) > div[data-min-height=\"281\"][data-unique-index=\"1\"][data-block-config=\"1.1\"] > .ins-element-image.ins-element-product-image.ins-template-image > .ins-responsive-banner-image[data-element-name=\"Product Image\"][data-variable-name=\"Image\"]"
+            ],
+            "html": "<div id=\"image-1647932527287\" class=\"ins-widget-element i...\" data-override-name=\"true\" data-element-name=\"Product Image\" data-variable-name=\"Image\" data-disable-setting...=\"width\" ondrop=\"return false;\" ondragstart=\"return false;\" data-erase=\"false\" data-removable=\"true\" role=\"img\" ...>",
+            "failureSummary": "Fix any of the following:\n  Element has focusable descendants"
+          },
+          {
+            "target": [
+              "div[ins-product-id=\"31538\"] > .ins-background-image-area.ins-adaptive-button-container.ins-add-to-cart-button"
+            ],
+            "html": "<div id=\"add-to-cart-17219913...\" class=\"ins-widget-element i...\" data-apply-to-all=\"button\" data-erase=\"false\" data-removable=\"true\" data-disable-setting...=\"width\" data-add-to-cart-tex...=\"Adicionar ao carrinh...\" data-after-click-tex...=\"Adicionar ao carrinh...\" display=\"always\" tabindex=\"0\" ...>",
+            "failureSummary": "Fix any of the following:\n  Using a negative tabindex on an element inside an interactive control does not prevent assistive technologies from focusing the element (even with aria-hidden=\"true\")"
+          }
+        ]
+      },
+      {
+        "id": "region",
+        "impact": "moderate",
+        "description": "Ensure all page content is contained by landmarks",
+        "help": "All page content should be contained by landmarks",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/region?application=axeAPI",
+        "blocksAgent": false,
+        "nodes": [
+          {
+            "target": [
+              ".vtex-render__container-id-full-banner"
+            ],
+            "html": "<div class=\"vtex-render__container-id-full-banner\">",
+            "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+          },
+          {
+            "target": [
+              ".ins-custom-wrapper-c61"
+            ],
+            "html": "<div class=\"ins-custom-wrapper-c61 sp-custom-c61-1\">\n           <img alt=\"feedback site\" src=\"https://web-image.useinsider.com/obramax/defaultImageLibrary/Avalie-nos%20%281%29-1754663766-1774270161.gif\" class=\"ins-custom-icon-c61\">\n        </div>",
+            "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+          },
+          {
+            "target": [
+              ".lojaobramax-region-0-x-toast__content__container > div"
+            ],
+            "html": "<div><h2 class=\"lojaobramax-region-0-x-toast__title\">Melhores ofertas perto de você!</h2><span class=\"lojaobramax-region-0-x-toast__text\">Compre com preços e prazos de entrega ajustados para sua região.</span></div>",
+            "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+          }
+        ]
+      },
+      {
+        "id": "role-img-alt",
+        "impact": "serious",
+        "description": "Ensure [role=\"img\"] and [role=\"image\"] elements have alternative text",
+        "help": "[role=\"img\"] and [role=\"image\"] elements must have alternative text",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/role-img-alt?application=axeAPI",
+        "blocksAgent": true,
+        "nodes": [
+          {
+            "target": [
+              "li[data-group-code=\"6119\"] > div[data-platform=\"web\"] > .ins-element-text.ins-selectable-element[data-no-menu-bar=\"true\"] > .ins-product-content[data-disable-settings=\"height\"][data-selected-layout=\"layout-3-1\"] > .ins-product-element > .ins-wrap-layout-double.ins-erase-container[data-selected-layout=\"layout-2-1\"] > .ins-layout-wrapper[data-element-name=\"Layout\"][data-erase=\"true\"] > .ins-layout-block-wrapper.ins-element-select-menu[data-min-width=\"5\"]:nth-child(1) > div[data-min-height=\"281\"][data-unique-index=\"1\"][data-block-config=\"1.1\"] > .ins-element-image.ins-element-product-image.ins-template-image > .ins-responsive-banner-image[data-element-name=\"Product Image\"][data-variable-name=\"Image\"]"
+            ],
+            "html": "<div id=\"image-1647932527287\" class=\"ins-widget-element i...\" data-override-name=\"true\" data-element-name=\"Product Image\" data-variable-name=\"Image\" data-disable-setting...=\"width\" ondrop=\"return false;\" ondragstart=\"return false;\" data-erase=\"false\" data-removable=\"true\" role=\"img\" ...>",
+            "failureSummary": "Fix any of the following:\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+          },
+          {
+            "target": [
+              "li[data-group-code=\"68267\"] > div[data-platform=\"web\"] > .ins-element-text.ins-selectable-element[data-no-menu-bar=\"true\"] > .ins-product-content[data-disable-settings=\"height\"][data-selected-layout=\"layout-3-1\"] > .ins-product-element > .ins-wrap-layout-double.ins-erase-container[data-selected-layout=\"layout-2-1\"] > .ins-layout-wrapper[data-element-name=\"Layout\"][data-erase=\"true\"] > .ins-layout-block-wrapper.ins-element-select-menu[data-min-width=\"5\"]:nth-child(1) > div[data-min-height=\"281\"][data-unique-index=\"1\"][data-block-config=\"1.1\"] > .ins-element-image.ins-element-product-image.ins-template-image > .ins-responsive-banner-image[data-element-name=\"Product Image\"][data-variable-name=\"Image\"]"
+            ],
+            "html": "<div id=\"image-1647932527287\" class=\"ins-widget-element i...\" data-override-name=\"true\" data-element-name=\"Product Image\" data-variable-name=\"Image\" data-disable-setting...=\"width\" ondrop=\"return false;\" ondragstart=\"return false;\" data-erase=\"false\" data-removable=\"true\" role=\"img\" ...>",
+            "failureSummary": "Fix any of the following:\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+          },
+          {
+            "target": [
+              "li[data-group-code=\"70867\"] > div[data-platform=\"web\"] > .ins-element-text.ins-selectable-element[data-no-menu-bar=\"true\"] > .ins-product-content[data-disable-settings=\"height\"][data-selected-layout=\"layout-3-1\"] > .ins-product-element > .ins-wrap-layout-double.ins-erase-container[data-selected-layout=\"layout-2-1\"] > .ins-layout-wrapper[data-element-name=\"Layout\"][data-erase=\"true\"] > .ins-layout-block-wrapper.ins-element-select-menu[data-min-width=\"5\"]:nth-child(1) > div[data-min-height=\"281\"][data-unique-index=\"1\"][data-block-config=\"1.1\"] > .ins-element-image.ins-element-product-image.ins-template-image > .ins-responsive-banner-image[data-element-name=\"Product Image\"][data-variable-name=\"Image\"]"
+            ],
+            "html": "<div id=\"image-1647932527287\" class=\"ins-widget-element i...\" data-override-name=\"true\" data-element-name=\"Product Image\" data-variable-name=\"Image\" data-disable-setting...=\"width\" ondrop=\"return false;\" ondragstart=\"return false;\" data-erase=\"false\" data-removable=\"true\" role=\"img\" ...>",
+            "failureSummary": "Fix any of the following:\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+          },
+          {
+            "target": [
+              "li[data-group-code=\"56430\"] > div[data-platform=\"web\"] > .ins-element-text.ins-selectable-element[data-no-menu-bar=\"true\"] > .ins-product-content[data-disable-settings=\"height\"][data-selected-layout=\"layout-3-1\"] > .ins-product-element > .ins-wrap-layout-double.ins-erase-container[data-selected-layout=\"layout-2-1\"] > .ins-layout-wrapper[data-element-name=\"Layout\"][data-erase=\"true\"] > .ins-layout-block-wrapper.ins-element-select-menu[data-min-width=\"5\"]:nth-child(1) > div[data-min-height=\"281\"][data-unique-index=\"1\"][data-block-config=\"1.1\"] > .ins-element-image.ins-element-product-image.ins-template-image > .ins-responsive-banner-image[data-element-name=\"Product Image\"][data-variable-name=\"Image\"]"
+            ],
+            "html": "<div id=\"image-1647932527287\" class=\"ins-widget-element i...\" data-override-name=\"true\" data-element-name=\"Product Image\" data-variable-name=\"Image\" data-disable-setting...=\"width\" ondrop=\"return false;\" ondragstart=\"return false;\" data-erase=\"false\" data-removable=\"true\" role=\"img\" ...>",
+            "failureSummary": "Fix any of the following:\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+          },
+          {
+            "target": [
+              "li[data-group-code=\"64860\"] > div[data-platform=\"web\"] > .ins-element-text.ins-selectable-element[data-no-menu-bar=\"true\"] > .ins-product-content[data-disable-settings=\"height\"][data-selected-layout=\"layout-3-1\"] > .ins-product-element > .ins-wrap-layout-double.ins-erase-container[data-selected-layout=\"layout-2-1\"] > .ins-layout-wrapper[data-element-name=\"Layout\"][data-erase=\"true\"] > .ins-layout-block-wrapper.ins-element-select-menu[data-min-width=\"5\"]:nth-child(1) > div[data-min-height=\"281\"][data-unique-index=\"1\"][data-block-config=\"1.1\"] > .ins-element-image.ins-element-product-image.ins-template-image > .ins-responsive-banner-image[data-element-name=\"Product Image\"][data-variable-name=\"Image\"]"
+            ],
+            "html": "<div id=\"image-1647932527287\" class=\"ins-widget-element i...\" data-override-name=\"true\" data-element-name=\"Product Image\" data-variable-name=\"Image\" data-disable-setting...=\"width\" ondrop=\"return false;\" ondragstart=\"return false;\" data-erase=\"false\" data-removable=\"true\" role=\"img\" ...>",
+            "failureSummary": "Fix any of the following:\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+          },
+          {
+            "target": [
+              "li[data-group-code=\"70362\"] > div[data-platform=\"web\"] > .ins-element-text.ins-selectable-element[data-no-menu-bar=\"true\"] > .ins-product-content[data-disable-settings=\"height\"][data-selected-layout=\"layout-3-1\"] > .ins-product-element > .ins-wrap-layout-double.ins-erase-container[data-selected-layout=\"layout-2-1\"] > .ins-layout-wrapper[data-element-name=\"Layout\"][data-erase=\"true\"] > .ins-layout-block-wrapper.ins-element-select-menu[data-min-width=\"5\"]:nth-child(1) > div[data-min-height=\"281\"][data-unique-index=\"1\"][data-block-config=\"1.1\"] > .ins-element-image.ins-element-product-image.ins-template-image > .ins-responsive-banner-image[data-element-name=\"Product Image\"][data-variable-name=\"Image\"]"
+            ],
+            "html": "<div id=\"image-1647932527287\" class=\"ins-widget-element i...\" data-override-name=\"true\" data-element-name=\"Product Image\" data-variable-name=\"Image\" data-disable-setting...=\"width\" ondrop=\"return false;\" ondragstart=\"return false;\" data-erase=\"false\" data-removable=\"true\" role=\"img\" ...>",
+            "failureSummary": "Fix any of the following:\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+          },
+          {
+            "target": [
+              "li[data-group-code=\"4149\"] > div[data-platform=\"web\"] > .ins-element-text.ins-selectable-element[data-no-menu-bar=\"true\"] > .ins-product-content[data-disable-settings=\"height\"][data-selected-layout=\"layout-3-1\"] > .ins-product-element > .ins-wrap-layout-double.ins-erase-container[data-selected-layout=\"layout-2-1\"] > .ins-layout-wrapper[data-element-name=\"Layout\"][data-erase=\"true\"] > .ins-layout-block-wrapper.ins-element-select-menu[data-min-width=\"5\"]:nth-child(1) > div[data-min-height=\"281\"][data-unique-index=\"1\"][data-block-config=\"1.1\"] > .ins-element-image.ins-element-product-image.ins-template-image > .ins-responsive-banner-image[data-element-name=\"Product Image\"][data-variable-name=\"Image\"]"
+            ],
+            "html": "<div id=\"image-1647932527287\" class=\"ins-widget-element i...\" data-override-name=\"true\" data-element-name=\"Product Image\" data-variable-name=\"Image\" data-disable-setting...=\"width\" ondrop=\"return false;\" ondragstart=\"return false;\" data-erase=\"false\" data-removable=\"true\" role=\"img\" ...>",
+            "failureSummary": "Fix any of the following:\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+          },
+          {
+            "target": [
+              "li[data-group-code=\"35726\"] > div[data-platform=\"web\"] > .ins-element-text.ins-selectable-element[data-no-menu-bar=\"true\"] > .ins-product-content[data-disable-settings=\"height\"][data-selected-layout=\"layout-3-1\"] > .ins-product-element > .ins-wrap-layout-double.ins-erase-container[data-selected-layout=\"layout-2-1\"] > .ins-layout-wrapper[data-element-name=\"Layout\"][data-erase=\"true\"] > .ins-layout-block-wrapper.ins-element-select-menu[data-min-width=\"5\"]:nth-child(1) > div[data-min-height=\"281\"][data-unique-index=\"1\"][data-block-config=\"1.1\"] > .ins-element-image.ins-element-product-image.ins-template-image > .ins-responsive-banner-image[data-element-name=\"Product Image\"][data-variable-name=\"Image\"]"
+            ],
+            "html": "<div id=\"image-1647932527287\" class=\"ins-widget-element i...\" data-override-name=\"true\" data-element-name=\"Product Image\" data-variable-name=\"Image\" data-disable-setting...=\"width\" ondrop=\"return false;\" ondragstart=\"return false;\" data-erase=\"false\" data-removable=\"true\" role=\"img\" ...>",
+            "failureSummary": "Fix any of the following:\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+          },
+          {
+            "target": [
+              "li[data-group-code=\"70876\"] > div[data-platform=\"web\"] > .ins-element-text.ins-selectable-element[data-no-menu-bar=\"true\"] > .ins-product-content[data-disable-settings=\"height\"][data-selected-layout=\"layout-3-1\"] > .ins-product-element > .ins-wrap-layout-double.ins-erase-container[data-selected-layout=\"layout-2-1\"] > .ins-layout-wrapper[data-element-name=\"Layout\"][data-erase=\"true\"] > .ins-layout-block-wrapper.ins-element-select-menu[data-min-width=\"5\"]:nth-child(1) > div[data-min-height=\"281\"][data-unique-index=\"1\"][data-block-config=\"1.1\"] > .ins-element-image.ins-element-product-image.ins-template-image > .ins-responsive-banner-image[data-element-name=\"Product Image\"][data-variable-name=\"Image\"]"
+            ],
+            "html": "<div id=\"image-1647932527287\" class=\"ins-widget-element i...\" data-override-name=\"true\" data-element-name=\"Product Image\" data-variable-name=\"Image\" data-disable-setting...=\"width\" ondrop=\"return false;\" ondragstart=\"return false;\" data-erase=\"false\" data-removable=\"true\" role=\"img\" ...>",
+            "failureSummary": "Fix any of the following:\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+          },
+          {
+            "target": [
+              "li[data-group-code=\"3021\"] > div[data-platform=\"web\"] > .ins-element-text.ins-selectable-element[data-no-menu-bar=\"true\"] > .ins-product-content[data-disable-settings=\"height\"][data-selected-layout=\"layout-3-1\"] > .ins-product-element > .ins-wrap-layout-double.ins-erase-container[data-selected-layout=\"layout-2-1\"] > .ins-layout-wrapper[data-element-name=\"Layout\"][data-erase=\"true\"] > .ins-layout-block-wrapper.ins-element-select-menu[data-min-width=\"5\"]:nth-child(1) > div[data-min-height=\"281\"][data-unique-index=\"1\"][data-block-config=\"1.1\"] > .ins-element-image.ins-element-product-image.ins-template-image > .ins-responsive-banner-image[data-element-name=\"Product Image\"][data-variable-name=\"Image\"]"
+            ],
+            "html": "<div id=\"image-1647932527287\" class=\"ins-widget-element i...\" data-override-name=\"true\" data-element-name=\"Product Image\" data-variable-name=\"Image\" data-disable-setting...=\"width\" ondrop=\"return false;\" ondragstart=\"return false;\" data-erase=\"false\" data-removable=\"true\" role=\"img\" ...>",
+            "failureSummary": "Fix any of the following:\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+          },
+          {
+            "target": [
+              "li[data-group-code=\"64394\"] > div[data-platform=\"web\"] > .ins-element-text.ins-selectable-element[data-no-menu-bar=\"true\"] > .ins-product-content[data-disable-settings=\"height\"][data-selected-layout=\"layout-3-1\"] > .ins-product-element > .ins-wrap-layout-double.ins-erase-container[data-selected-layout=\"layout-2-1\"] > .ins-layout-wrapper[data-element-name=\"Layout\"][data-erase=\"true\"] > .ins-layout-block-wrapper.ins-element-select-menu[data-min-width=\"5\"]:nth-child(1) > div[data-min-height=\"281\"][data-unique-index=\"1\"][data-block-config=\"1.1\"] > .ins-element-image.ins-element-product-image.ins-template-image > .ins-responsive-banner-image[data-element-name=\"Product Image\"][data-variable-name=\"Image\"]"
+            ],
+            "html": "<div id=\"image-1647932527287\" class=\"ins-widget-element i...\" data-override-name=\"true\" data-element-name=\"Product Image\" data-variable-name=\"Image\" data-disable-setting...=\"width\" ondrop=\"return false;\" ondragstart=\"return false;\" data-erase=\"false\" data-removable=\"true\" role=\"img\" ...>",
+            "failureSummary": "Fix any of the following:\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+          },
+          {
+            "target": [
+              "li[data-group-code=\"33399\"] > div[data-platform=\"web\"] > .ins-element-text.ins-selectable-element[data-no-menu-bar=\"true\"] > .ins-product-content[data-disable-settings=\"height\"][data-selected-layout=\"layout-3-1\"] > .ins-product-element > .ins-wrap-layout-double.ins-erase-container[data-selected-layout=\"layout-2-1\"] > .ins-layout-wrapper[data-element-name=\"Layout\"][data-erase=\"true\"] > .ins-layout-block-wrapper.ins-element-select-menu[data-min-width=\"5\"]:nth-child(1) > div[data-min-height=\"281\"][data-unique-index=\"1\"][data-block-config=\"1.1\"] > .ins-element-image.ins-element-product-image.ins-template-image > .ins-responsive-banner-image[data-element-name=\"Product Image\"][data-variable-name=\"Image\"]"
+            ],
+            "html": "<div id=\"image-1647932527287\" class=\"ins-widget-element i...\" data-override-name=\"true\" data-element-name=\"Product Image\" data-variable-name=\"Image\" data-disable-setting...=\"width\" ondrop=\"return false;\" ondragstart=\"return false;\" data-erase=\"false\" data-removable=\"true\" role=\"img\" ...>",
+            "failureSummary": "Fix any of the following:\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+          },
+          {
+            "target": [
+              "li[data-group-code=\"68461\"] > div[data-platform=\"web\"] > .ins-element-text.ins-selectable-element[data-no-menu-bar=\"true\"] > .ins-product-content[data-disable-settings=\"height\"][data-selected-layout=\"layout-3-1\"] > .ins-product-element > .ins-wrap-layout-double.ins-erase-container[data-selected-layout=\"layout-2-1\"] > .ins-layout-wrapper[data-element-name=\"Layout\"][data-erase=\"true\"] > .ins-layout-block-wrapper.ins-element-select-menu[data-min-width=\"5\"]:nth-child(1) > div[data-min-height=\"281\"][data-unique-index=\"1\"][data-block-config=\"1.1\"] > .ins-element-image.ins-element-product-image.ins-template-image > .ins-responsive-banner-image[data-element-name=\"Product Image\"][data-variable-name=\"Image\"]"
+            ],
+            "html": "<div id=\"image-1647932527287\" class=\"ins-widget-element i...\" data-override-name=\"true\" data-element-name=\"Product Image\" data-variable-name=\"Image\" data-disable-setting...=\"width\" ondrop=\"return false;\" ondragstart=\"return false;\" data-erase=\"false\" data-removable=\"true\" role=\"img\" ...>",
+            "failureSummary": "Fix any of the following:\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+          },
+          {
+            "target": [
+              "li[data-group-code=\"8974\"] > div[data-platform=\"web\"] > .ins-element-text.ins-selectable-element[data-no-menu-bar=\"true\"] > .ins-product-content[data-disable-settings=\"height\"][data-selected-layout=\"layout-3-1\"] > .ins-product-element > .ins-wrap-layout-double.ins-erase-container[data-selected-layout=\"layout-2-1\"] > .ins-layout-wrapper[data-element-name=\"Layout\"][data-erase=\"true\"] > .ins-layout-block-wrapper.ins-element-select-menu[data-min-width=\"5\"]:nth-child(1) > div[data-min-height=\"281\"][data-unique-index=\"1\"][data-block-config=\"1.1\"] > .ins-element-image.ins-element-product-image.ins-template-image > .ins-responsive-banner-image[data-element-name=\"Product Image\"][data-variable-name=\"Image\"]"
+            ],
+            "html": "<div id=\"image-1647932527287\" class=\"ins-widget-element i...\" data-override-name=\"true\" data-element-name=\"Product Image\" data-variable-name=\"Image\" data-disable-setting...=\"width\" ondrop=\"return false;\" ondragstart=\"return false;\" data-erase=\"false\" data-removable=\"true\" role=\"img\" ...>",
+            "failureSummary": "Fix any of the following:\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+          },
+          {
+            "target": [
+              "li[data-group-code=\"16418\"] > div[data-platform=\"web\"] > .ins-element-text.ins-selectable-element[data-no-menu-bar=\"true\"] > .ins-product-content[data-disable-settings=\"height\"][data-selected-layout=\"layout-3-1\"] > .ins-product-element > .ins-wrap-layout-double.ins-erase-container[data-selected-layout=\"layout-2-1\"] > .ins-layout-wrapper[data-element-name=\"Layout\"][data-erase=\"true\"] > .ins-layout-block-wrapper.ins-element-select-menu[data-min-width=\"5\"]:nth-child(1) > div[data-min-height=\"281\"][data-unique-index=\"1\"][data-block-config=\"1.1\"] > .ins-element-image.ins-element-product-image.ins-template-image > .ins-responsive-banner-image[data-element-name=\"Product Image\"][data-variable-name=\"Image\"]"
+            ],
+            "html": "<div id=\"image-1647932527287\" class=\"ins-widget-element i...\" data-override-name=\"true\" data-element-name=\"Product Image\" data-variable-name=\"Image\" data-disable-setting...=\"width\" ondrop=\"return false;\" ondragstart=\"return false;\" data-erase=\"false\" data-removable=\"true\" role=\"img\" ...>",
+            "failureSummary": "Fix any of the following:\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+          },
+          {
+            "target": [
+              "li[data-group-code=\"59354\"] > div[data-platform=\"web\"] > .ins-element-text.ins-selectable-element[data-no-menu-bar=\"true\"] > .ins-product-content[data-disable-settings=\"height\"][data-selected-layout=\"layout-3-1\"] > .ins-product-element > .ins-wrap-layout-double.ins-erase-container[data-selected-layout=\"layout-2-1\"] > .ins-layout-wrapper[data-element-name=\"Layout\"][data-erase=\"true\"] > .ins-layout-block-wrapper.ins-element-select-menu[data-min-width=\"5\"]:nth-child(1) > div[data-min-height=\"281\"][data-unique-index=\"1\"][data-block-config=\"1.1\"] > .ins-element-image.ins-element-product-image.ins-template-image > .ins-responsive-banner-image[data-element-name=\"Product Image\"][data-variable-name=\"Image\"]"
+            ],
+            "html": "<div id=\"image-1647932527287\" class=\"ins-widget-element i...\" data-override-name=\"true\" data-element-name=\"Product Image\" data-variable-name=\"Image\" data-disable-setting...=\"width\" ondrop=\"return false;\" ondragstart=\"return false;\" data-erase=\"false\" data-removable=\"true\" role=\"img\" ...>",
+            "failureSummary": "Fix any of the following:\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+          },
+          {
+            "target": [
+              "li[data-group-code=\"4437\"] > div[data-platform=\"web\"] > .ins-element-text.ins-selectable-element[data-no-menu-bar=\"true\"] > .ins-product-content[data-disable-settings=\"height\"][data-selected-layout=\"layout-3-1\"] > .ins-product-element > .ins-wrap-layout-double.ins-erase-container[data-selected-layout=\"layout-2-1\"] > .ins-layout-wrapper[data-element-name=\"Layout\"][data-erase=\"true\"] > .ins-layout-block-wrapper.ins-element-select-menu[data-min-width=\"5\"]:nth-child(1) > div[data-min-height=\"281\"][data-unique-index=\"1\"][data-block-config=\"1.1\"] > .ins-element-image.ins-element-product-image.ins-template-image > .ins-responsive-banner-image[data-element-name=\"Product Image\"][data-variable-name=\"Image\"]"
+            ],
+            "html": "<div id=\"image-1647932527287\" class=\"ins-widget-element i...\" data-override-name=\"true\" data-element-name=\"Product Image\" data-variable-name=\"Image\" data-disable-setting...=\"width\" ondrop=\"return false;\" ondragstart=\"return false;\" data-erase=\"false\" data-removable=\"true\" role=\"img\" ...>",
+            "failureSummary": "Fix any of the following:\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+          },
+          {
+            "target": [
+              "li[data-group-code=\"56416\"] > div[data-platform=\"web\"] > .ins-element-text.ins-selectable-element[data-no-menu-bar=\"true\"] > .ins-product-content[data-disable-settings=\"height\"][data-selected-layout=\"layout-3-1\"] > .ins-product-element > .ins-wrap-layout-double.ins-erase-container[data-selected-layout=\"layout-2-1\"] > .ins-layout-wrapper[data-element-name=\"Layout\"][data-erase=\"true\"] > .ins-layout-block-wrapper.ins-element-select-menu[data-min-width=\"5\"]:nth-child(1) > div[data-min-height=\"281\"][data-unique-index=\"1\"][data-block-config=\"1.1\"] > .ins-element-image.ins-element-product-image.ins-template-image > .ins-responsive-banner-image[data-element-name=\"Product Image\"][data-variable-name=\"Image\"]"
+            ],
+            "html": "<div id=\"image-1647932527287\" class=\"ins-widget-element i...\" data-override-name=\"true\" data-element-name=\"Product Image\" data-variable-name=\"Image\" data-disable-setting...=\"width\" ondrop=\"return false;\" ondragstart=\"return false;\" data-erase=\"false\" data-removable=\"true\" role=\"img\" ...>",
+            "failureSummary": "Fix any of the following:\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+          },
+          {
+            "target": [
+              "li[data-group-code=\"64382\"] > div[data-platform=\"web\"] > .ins-element-text.ins-selectable-element[data-no-menu-bar=\"true\"] > .ins-product-content[data-disable-settings=\"height\"][data-selected-layout=\"layout-3-1\"] > .ins-product-element > .ins-wrap-layout-double.ins-erase-container[data-selected-layout=\"layout-2-1\"] > .ins-layout-wrapper[data-element-name=\"Layout\"][data-erase=\"true\"] > .ins-layout-block-wrapper.ins-element-select-menu[data-min-width=\"5\"]:nth-child(1) > div[data-min-height=\"281\"][data-unique-index=\"1\"][data-block-config=\"1.1\"] > .ins-element-image.ins-element-product-image.ins-template-image > .ins-responsive-banner-image[data-element-name=\"Product Image\"][data-variable-name=\"Image\"]"
+            ],
+            "html": "<div id=\"image-1647932527287\" class=\"ins-widget-element i...\" data-override-name=\"true\" data-element-name=\"Product Image\" data-variable-name=\"Image\" data-disable-setting...=\"width\" ondrop=\"return false;\" ondragstart=\"return false;\" data-erase=\"false\" data-removable=\"true\" role=\"img\" ...>",
+            "failureSummary": "Fix any of the following:\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+          },
+          {
+            "target": [
+              "li[data-group-code=\"61309\"] > div[data-platform=\"web\"] > .ins-element-text.ins-selectable-element[data-no-menu-bar=\"true\"] > .ins-product-content[data-disable-settings=\"height\"][data-selected-layout=\"layout-3-1\"] > .ins-product-element > .ins-wrap-layout-double.ins-erase-container[data-selected-layout=\"layout-2-1\"] > .ins-layout-wrapper[data-element-name=\"Layout\"][data-erase=\"true\"] > .ins-layout-block-wrapper.ins-element-select-menu[data-min-width=\"5\"]:nth-child(1) > div[data-min-height=\"281\"][data-unique-index=\"1\"][data-block-config=\"1.1\"] > .ins-element-image.ins-element-product-image.ins-template-image > .ins-responsive-banner-image[data-element-name=\"Product Image\"][data-variable-name=\"Image\"]"
+            ],
+            "html": "<div id=\"image-1647932527287\" class=\"ins-widget-element i...\" data-override-name=\"true\" data-element-name=\"Product Image\" data-variable-name=\"Image\" data-disable-setting...=\"width\" ondrop=\"return false;\" ondragstart=\"return false;\" data-erase=\"false\" data-removable=\"true\" role=\"img\" ...>",
+            "failureSummary": "Fix any of the following:\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+          },
+          {
+            "target": [
+              "li[data-group-code=\"66408\"] > div[data-platform=\"web\"] > .ins-element-text.ins-selectable-element[data-no-menu-bar=\"true\"] > .ins-product-content[data-disable-settings=\"height\"][data-selected-layout=\"layout-3-1\"] > .ins-product-element > .ins-wrap-layout-double.ins-erase-container[data-selected-layout=\"layout-2-1\"] > .ins-layout-wrapper[data-element-name=\"Layout\"][data-erase=\"true\"] > .ins-layout-block-wrapper.ins-element-select-menu[data-min-width=\"5\"]:nth-child(1) > div[data-min-height=\"281\"][data-unique-index=\"1\"][data-block-config=\"1.1\"] > .ins-element-image.ins-element-product-image.ins-template-image > .ins-responsive-banner-image[data-element-name=\"Product Image\"][data-variable-name=\"Image\"]"
+            ],
+            "html": "<div id=\"image-1647932527287\" class=\"ins-widget-element i...\" data-override-name=\"true\" data-element-name=\"Product Image\" data-variable-name=\"Image\" data-disable-setting...=\"width\" ondrop=\"return false;\" ondragstart=\"return false;\" data-erase=\"false\" data-removable=\"true\" role=\"img\" ...>",
+            "failureSummary": "Fix any of the following:\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+          },
+          {
+            "target": [
+              "li[data-group-code=\"70870\"] > div[data-platform=\"web\"] > .ins-element-text.ins-selectable-element[data-no-menu-bar=\"true\"] > .ins-product-content[data-disable-settings=\"height\"][data-selected-layout=\"layout-3-1\"] > .ins-product-element > .ins-wrap-layout-double.ins-erase-container[data-selected-layout=\"layout-2-1\"] > .ins-layout-wrapper[data-element-name=\"Layout\"][data-erase=\"true\"] > .ins-layout-block-wrapper.ins-element-select-menu[data-min-width=\"5\"]:nth-child(1) > div[data-min-height=\"281\"][data-unique-index=\"1\"][data-block-config=\"1.1\"] > .ins-element-image.ins-element-product-image.ins-template-image > .ins-responsive-banner-image[data-element-name=\"Product Image\"][data-variable-name=\"Image\"]"
+            ],
+            "html": "<div id=\"image-1647932527287\" class=\"ins-widget-element i...\" data-override-name=\"true\" data-element-name=\"Product Image\" data-variable-name=\"Image\" data-disable-setting...=\"width\" ondrop=\"return false;\" ondragstart=\"return false;\" data-erase=\"false\" data-removable=\"true\" role=\"img\" ...>",
+            "failureSummary": "Fix any of the following:\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+          },
+          {
+            "target": [
+              "li[data-group-code=\"9642\"] > div[data-platform=\"web\"] > .ins-element-text.ins-selectable-element[data-no-menu-bar=\"true\"] > .ins-product-content[data-disable-settings=\"height\"][data-selected-layout=\"layout-3-1\"] > .ins-product-element > .ins-wrap-layout-double.ins-erase-container[data-selected-layout=\"layout-2-1\"] > .ins-layout-wrapper[data-element-name=\"Layout\"][data-erase=\"true\"] > .ins-layout-block-wrapper.ins-element-select-menu[data-min-width=\"5\"]:nth-child(1) > div[data-min-height=\"281\"][data-unique-index=\"1\"][data-block-config=\"1.1\"] > .ins-element-image.ins-element-product-image.ins-template-image > .ins-responsive-banner-image[data-element-name=\"Product Image\"][data-variable-name=\"Image\"]"
+            ],
+            "html": "<div id=\"image-1647932527287\" class=\"ins-widget-element i...\" data-override-name=\"true\" data-element-name=\"Product Image\" data-variable-name=\"Image\" data-disable-setting...=\"width\" ondrop=\"return false;\" ondragstart=\"return false;\" data-erase=\"false\" data-removable=\"true\" role=\"img\" ...>",
+            "failureSummary": "Fix any of the following:\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+          },
+          {
+            "target": [
+              "li[data-group-code=\"68463\"] > div[data-platform=\"web\"] > .ins-element-text.ins-selectable-element[data-no-menu-bar=\"true\"] > .ins-product-content[data-disable-settings=\"height\"][data-selected-layout=\"layout-3-1\"] > .ins-product-element > .ins-wrap-layout-double.ins-erase-container[data-selected-layout=\"layout-2-1\"] > .ins-layout-wrapper[data-element-name=\"Layout\"][data-erase=\"true\"] > .ins-layout-block-wrapper.ins-element-select-menu[data-min-width=\"5\"]:nth-child(1) > div[data-min-height=\"281\"][data-unique-index=\"1\"][data-block-config=\"1.1\"] > .ins-element-image.ins-element-product-image.ins-template-image > .ins-responsive-banner-image[data-element-name=\"Product Image\"][data-variable-name=\"Image\"]"
+            ],
+            "html": "<div id=\"image-1647932527287\" class=\"ins-widget-element i...\" data-override-name=\"true\" data-element-name=\"Product Image\" data-variable-name=\"Image\" data-disable-setting...=\"width\" ondrop=\"return false;\" ondragstart=\"return false;\" data-erase=\"false\" data-removable=\"true\" role=\"img\" ...>",
+            "failureSummary": "Fix any of the following:\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+          },
+          {
+            "target": [
+              "li[data-group-code=\"36796\"] > div[data-platform=\"web\"] > .ins-element-text.ins-selectable-element[data-no-menu-bar=\"true\"] > .ins-product-content[data-disable-settings=\"height\"][data-selected-layout=\"layout-3-1\"] > .ins-product-element > .ins-wrap-layout-double.ins-erase-container[data-selected-layout=\"layout-2-1\"] > .ins-layout-wrapper[data-element-name=\"Layout\"][data-erase=\"true\"] > .ins-layout-block-wrapper.ins-element-select-menu[data-min-width=\"5\"]:nth-child(1) > div[data-min-height=\"281\"][data-unique-index=\"1\"][data-block-config=\"1.1\"] > .ins-element-image.ins-element-product-image.ins-template-image > .ins-responsive-banner-image[data-element-name=\"Product Image\"][data-variable-name=\"Image\"]"
+            ],
+            "html": "<div id=\"image-1647932527287\" class=\"ins-widget-element i...\" data-override-name=\"true\" data-element-name=\"Product Image\" data-variable-name=\"Image\" data-disable-setting...=\"width\" ondrop=\"return false;\" ondragstart=\"return false;\" data-erase=\"false\" data-removable=\"true\" role=\"img\" ...>",
+            "failureSummary": "Fix any of the following:\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+          },
+          {
+            "target": [
+              "li[data-group-code=\"27330\"] > div[data-platform=\"web\"] > .ins-element-text.ins-selectable-element[data-no-menu-bar=\"true\"] > .ins-product-content[data-disable-settings=\"height\"][data-selected-layout=\"layout-3-1\"] > .ins-product-element > .ins-wrap-layout-double.ins-erase-container[data-selected-layout=\"layout-2-1\"] > .ins-layout-wrapper[data-element-name=\"Layout\"][data-erase=\"true\"] > .ins-layout-block-wrapper.ins-element-select-menu[data-min-width=\"5\"]:nth-child(1) > div[data-min-height=\"281\"][data-unique-index=\"1\"][data-block-config=\"1.1\"] > .ins-element-image.ins-element-product-image.ins-template-image > .ins-responsive-banner-image[data-element-name=\"Product Image\"][data-variable-name=\"Image\"]"
+            ],
+            "html": "<div id=\"image-1647932527287\" class=\"ins-widget-element i...\" data-override-name=\"true\" data-element-name=\"Product Image\" data-variable-name=\"Image\" data-disable-setting...=\"width\" ondrop=\"return false;\" ondragstart=\"return false;\" data-erase=\"false\" data-removable=\"true\" role=\"img\" ...>",
+            "failureSummary": "Fix any of the following:\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+          },
+          {
+            "target": [
+              "li[data-group-code=\"8645\"] > div[data-platform=\"web\"] > .ins-element-text.ins-selectable-element[data-no-menu-bar=\"true\"] > .ins-product-content[data-disable-settings=\"height\"][data-selected-layout=\"layout-3-1\"] > .ins-product-element > .ins-wrap-layout-double.ins-erase-container[data-selected-layout=\"layout-2-1\"] > .ins-layout-wrapper[data-element-name=\"Layout\"][data-erase=\"true\"] > .ins-layout-block-wrapper.ins-element-select-menu[data-min-width=\"5\"]:nth-child(1) > div[data-min-height=\"281\"][data-unique-index=\"1\"][data-block-config=\"1.1\"] > .ins-element-image.ins-element-product-image.ins-template-image > .ins-responsive-banner-image[data-element-name=\"Product Image\"][data-variable-name=\"Image\"]"
+            ],
+            "html": "<div id=\"image-1647932527287\" class=\"ins-widget-element i...\" data-override-name=\"true\" data-element-name=\"Product Image\" data-variable-name=\"Image\" data-disable-setting...=\"width\" ondrop=\"return false;\" ondragstart=\"return false;\" data-erase=\"false\" data-removable=\"true\" role=\"img\" ...>",
+            "failureSummary": "Fix any of the following:\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+          },
+          {
+            "target": [
+              "li[data-group-code=\"70984\"] > div[data-platform=\"web\"] > .ins-element-text.ins-selectable-element[data-no-menu-bar=\"true\"] > .ins-product-content[data-disable-settings=\"height\"][data-selected-layout=\"layout-3-1\"] > .ins-product-element > .ins-wrap-layout-double.ins-erase-container[data-selected-layout=\"layout-2-1\"] > .ins-layout-wrapper[data-element-name=\"Layout\"][data-erase=\"true\"] > .ins-layout-block-wrapper.ins-element-select-menu[data-min-width=\"5\"]:nth-child(1) > div[data-min-height=\"281\"][data-unique-index=\"1\"][data-block-config=\"1.1\"] > .ins-element-image.ins-element-product-image.ins-template-image > .ins-responsive-banner-image[data-element-name=\"Product Image\"][data-variable-name=\"Image\"]"
+            ],
+            "html": "<div id=\"image-1647932527287\" class=\"ins-widget-element i...\" data-override-name=\"true\" data-element-name=\"Product Image\" data-variable-name=\"Image\" data-disable-setting...=\"width\" ondrop=\"return false;\" ondragstart=\"return false;\" data-erase=\"false\" data-removable=\"true\" role=\"img\" ...>",
+            "failureSummary": "Fix any of the following:\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+          },
+          {
+            "target": [
+              "li[data-group-code=\"62556\"] > div[data-platform=\"web\"] > .ins-element-text.ins-selectable-element[data-no-menu-bar=\"true\"] > .ins-product-content[data-disable-settings=\"height\"][data-selected-layout=\"layout-3-1\"] > .ins-product-element > .ins-wrap-layout-double.ins-erase-container[data-selected-layout=\"layout-2-1\"] > .ins-layout-wrapper[data-element-name=\"Layout\"][data-erase=\"true\"] > .ins-layout-block-wrapper.ins-element-select-menu[data-min-width=\"5\"]:nth-child(1) > div[data-min-height=\"281\"][data-unique-index=\"1\"][data-block-config=\"1.1\"] > .ins-element-image.ins-element-product-image.ins-template-image > .ins-responsive-banner-image[data-element-name=\"Product Image\"][data-variable-name=\"Image\"]"
+            ],
+            "html": "<div id=\"image-1647932527287\" class=\"ins-widget-element i...\" data-override-name=\"true\" data-element-name=\"Product Image\" data-variable-name=\"Image\" data-disable-setting...=\"width\" ondrop=\"return false;\" ondragstart=\"return false;\" data-erase=\"false\" data-removable=\"true\" role=\"img\" ...>",
+            "failureSummary": "Fix any of the following:\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+          },
+          {
+            "target": [
+              "li[data-group-code=\"31616\"] > div[data-platform=\"web\"] > .ins-element-text.ins-selectable-element[data-no-menu-bar=\"true\"] > .ins-product-content[data-disable-settings=\"height\"][data-selected-layout=\"layout-3-1\"] > .ins-product-element > .ins-wrap-layout-double.ins-erase-container[data-selected-layout=\"layout-2-1\"] > .ins-layout-wrapper[data-element-name=\"Layout\"][data-erase=\"true\"] > .ins-layout-block-wrapper.ins-element-select-menu[data-min-width=\"5\"]:nth-child(1) > div[data-min-height=\"281\"][data-unique-index=\"1\"][data-block-config=\"1.1\"] > .ins-element-image.ins-element-product-image.ins-template-image > .ins-responsive-banner-image[data-element-name=\"Product Image\"][data-variable-name=\"Image\"]"
+            ],
+            "html": "<div id=\"image-1647932527287\" class=\"ins-widget-element i...\" data-override-name=\"true\" data-element-name=\"Product Image\" data-variable-name=\"Image\" data-disable-setting...=\"width\" ondrop=\"return false;\" ondragstart=\"return false;\" data-erase=\"false\" data-removable=\"true\" role=\"img\" ...>",
+            "failureSummary": "Fix any of the following:\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+          }
+        ]
+      }
+    ]
+  },
+  "taskResult": {
+    "completed": true,
+    "stepsAttempted": 3,
+    "totalSteps": 3,
+    "log": [
+      {
+        "step": "Buscar o produto (localizar campo + digitar + confirmar)",
+        "success": true,
+        "matchedElement": {
+          "role": "combobox",
+          "name": "Digite sua busca aqui"
+        }
+      },
+      {
+        "step": "Abrir o primeiro produto do resultado",
+        "success": true,
+        "matchedElement": {
+          "role": "a",
+          "name": "View product details for Furadeira Parafusadeira 3/8\" 12V 1 Bateria com 22 Acessórios Razi"
+        }
+      },
+      {
+        "step": "Adicionar ao carrinho",
+        "success": true,
+        "matchedElement": {
+          "role": "button",
+          "name": "Adicionar ao Carrinho"
+        }
+      }
+    ]
+  }
+}

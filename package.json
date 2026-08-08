@@ -1,0 +1,19 @@
+{
+  "name": "agent-readiness-score",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test-static.js",
+    "audit": "node src/audit.js",
+    "install-browser": "playwright install chromium"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axe-core": "^4.13.0",
+    "jsdom": "^30.0.1",
+    "playwright": "^1.62.1"
+  }
+}
