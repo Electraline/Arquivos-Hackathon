@@ -1,18 +1,18 @@
 /**
  * agentTask.js
  * ------------
- * Simulates how a DOM/accessibility-tree-based shopping agent (à la Playwright
- * MCP, ChatGPT Atlas, Project Mariner) would try to complete a task on the
- * site — using ONLY role + accessible name, never pixels/screenshots.
+* Simula como um agente de compras baseado em DOM/árvore de acessibilidade (estilo Playwright
+ * MCP, ChatGPT Atlas, Project Mariner) tentaria concluir uma tarefa no
+ * site — utilizando APENAS *role* e nome acessível, nunca pixels ou capturas de tela.
  *
- * This is the demo centerpiece: run it before fixes (steps fail) and after
- * fixes (steps pass) to show the score change translate into real behavior.
+ * Este é o elemento central da demonstração: execute-o antes das correções (as etapas falham) e depois
+ * das correções (as etapas passam) para mostrar como a mudança na pontuação se traduz em comportamento real.
  *
- * `reasoner` is pluggable:
- *   - heuristicReasoner (default): keyword matching, zero external calls,
- *     good enough for a hackathon demo and fully offline.
- *   - llmReasoner: swap in a real Claude call for smarter matching if you
- *     have time/budget left (see src/reasoners/llmReasoner.js).
+ * O `reasoner` é modular/substituível:
+ *   - heuristicReasoner (padrão): correspondência de palavras-chave, nenhuma chamada externa,
+ *     bom o suficiente para uma demonstração de hackathon e totalmente offline.
+ *   - llmReasoner: substitua por uma chamada real ao Claude para uma correspondência mais inteligente, se
+ *     tiver tempo/orçamento disponível (veja src/reasoners/llmReasoner.js).
  */
 
 const INTERACTIVE_SELECTOR = [

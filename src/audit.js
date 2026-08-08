@@ -9,7 +9,7 @@
  * Example:
  *   node src/audit.js https://www.obramax.com.br --task-search="furadeira" --out=reports/obramax.json
  */
-
+const { llmReasoner } = require('./reasoners/llmReasoner');
 const fs = require('fs');
 const path = require('path');
 const { chromium } = require('playwright');
@@ -107,7 +107,7 @@ async function main() {
 
   console.log('\n3/4 · Simulando agente tentando comprar...');
   const steps = buildAddToCartTask(opts.taskSearch);
-  const taskResult = await runAgentTask(page, steps);
+  const taskResult = await runAgentTask(page, steps, { reasoner: llmReasoner() });
   taskResult.log.forEach((s) =>
     console.log(`   ${s.success ? '✅' : '❌'} ${s.step}${s.reason ? ' — ' + s.reason : ''}`)
   );
